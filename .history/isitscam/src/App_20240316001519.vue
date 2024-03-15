@@ -2,7 +2,15 @@
   <div class="flex flex-row">
 
 
-
+<div>
+  <h1 class="title">isit<span class="bold-title">scam</span></h1>
+  <p>Peepeepoopoo</p>
+  <p>Poopoopeeoee</p>
+  
+<a href="/pages/main">
+    <button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">More I guess</button>
+  </a>
+</div>
 <div>
   <router-link to-main></router-link>
 <div class="flex items-center justify-center w-full">
@@ -28,12 +36,11 @@
 <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
 
 </div>
-<div class="drawer right" ref="drawer">
-    <div class="drag" ref="drag"></div>
-  </div>
 </div>
 
-  
+  <div class="drawer right" ref="drawer">
+    <div class="drag" ref="drag"></div>
+  </div>
 </template>
 
 <style>
@@ -48,8 +55,7 @@ body {
   background: lightgray;
   resize: horizontal;
   overflow: auto;
-  box-shadow: 0px 0px 50px grey;
-  
+  shad
 }
 .drawer.right {
   right: -380px;
@@ -66,7 +72,6 @@ body {
   height: 100px;
   background: #aaa;
   cursor: ew-resize; 
-  
 }
 .drawer.left .drag {
   left: unset;
