@@ -2,16 +2,10 @@
     <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center  z-20"v-if="showForm">
       
       <ScamForm class="absolute z-20"/>
-      <div class=" relative w-4/5 h-4/5">
-      <div class="  absolute z-50 bottom-4 right-4">
-      <button type="button" @click="toggleComponent" class=" m-4  text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Submit</button></div>
+      <div class>
+      <button type="button" @click="toggleComponent" class=" z-50 m-4  text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Submit</button></div>
+
     </div>
-    </div>
-  <!-- Form dialog -->
-  <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center "v-if="showForm">
-    <ScamForm class="absolute z-50"/>
-  </div>
-  
   <div class="flex flex-row">
 
 
@@ -86,69 +80,23 @@
 
 <div class="wrap">
     <div class="drag" ref="drag"></div></div>
-    <div class="flex flex-row items-center justify-center">
-      <router-link to-main></router-link>
-      <!-- Click to Upload -->
-      <div class="flex items-center justify-center w-full ">
-        <label for="dropzone-file" class="flex flex-col items-center justify-center w-80 h-96 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-200 dark:bg-gray-50 hover:bg-gray-100 dark:border-gray-200 dark:hover:border-gray-100 dark:hover:bg-gray-100">
-            <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
-                </svg>
-                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
-                <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-            </div>
-            <input id="dropzone-file" type="file" class="hidden" />
-        </label>
-      </div> 
-      <div >
-        <p class="text-gray-500 text-2xl mx-4">or</p>
-      </div>
-      <!-- Write thoughts here -->
-      <div class="flex items-center justify-center w-full h-full">
-        <textarea id="message" rows="4" class="resize-none block p-2.5 w-80 h-96 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
-      </div>
-    </div>
-    
-    <!-- Drawer -->
-    <div class="drawer right" ref="drawer">
-      <!-- Data populate -->
-      <scam-card/>
-      <scam-card/>
-      <scam-card/>
-      <scam-card/>
-      <scam-card/>
-      <scam-card/>
-      <scam-card/>
-      <scam-card/>
-      <scam-card/>
-      
-      <div class="wrap">
-        <div class="drag" ref="drag"></div></div>
-      </div>
   </div>
 
-  <div>
-    <button type="button" class="  m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600   dark:focus:ring-gray-700">Submit</button>
+</div>
+<div>
+
+  <button type="button" class="  m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Submit</button>
+</div>
+<div class="text-left"> <p class="text-gray-900  text-lg" >Result</p>
+
+  <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+    <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    
   </div>
-  <div class="text-left"> 
-    <p class="text-gray-900  text-lg" >Result</p>
-    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
-    </div>
-    <p class="text-gray-900">Sounds like the stealing boyfriend scam</p>
-    <p class="text-gray-900  text-lg" >Analytics</p>
-  </div>
-  
-  <!-- Add button -->
-  <div class="button-add">
-    <button @click="toggleComponent" type="button" class="fixed bottom-6  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-4 text-center  items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-      <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M5 12h14m-7 7V5"/>
-      </svg>
-      <span class="sr-only">Icon description</span>
-    </button>
-  </div>
+  <p class="text-gray-900">Sounds like the stealing boyfriend scam</p>
+<p class="text-gray-900  text-lg" >Analytics</p>
+</div>
+
 </template>
 
 <style>
@@ -175,10 +123,10 @@ body {
 
 }
 .drawer.right {
-  right: 0px;
+  right: -380px;
   bottom: 0px;
-  max-width: 100%;
-  min-width: 0px;
+  max-width: 854px;
+  min-width: 400px;
 }
 .drag {
   position: sticky;
@@ -197,8 +145,9 @@ body {
   right: 0;
 }
 .button-add{
+
   position: absolute;
-  right: 170px;
+    left: 370px;
 
 }
 </style>
