@@ -1,7 +1,4 @@
 <template>
-    <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center "v-if="showForm">
-      <ScamForm class="absolute z-50"/>
-    </div>
   <div class="flex flex-row">
 
 

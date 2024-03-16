@@ -1,7 +1,4 @@
 <template>
-    <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center "v-if="showForm">
-      <ScamForm class="absolute z-50"/>
-    </div>
   <div class="flex flex-row">
 
 
@@ -36,11 +33,9 @@
 <div class="drawer right" ref="drawer">
 
 
-
-
   <!-- Add button -->
 <div class="button-add">
-  <button @click="toggleComponent" type="button" class="fixed bottom-6  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-4 text-center  items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+  <button @click="show++" type="button" class="fixed bottom-6  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-4 text-center  items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
     <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M5 12h14m-7 7V5"/>
 </svg>
@@ -147,18 +142,13 @@ body {
 </style>
 
 <script>
-import ScamForm from './components/ScamForm.vue'
 export default {
   data() {
     return {
       isDragging: false,
       startX: 0,
-      startWidth: 0,
-      showForm: false,
+      startWidth: 0
     };
-  },
-  components: {
-    ScamForm // Register your component
   },
   mounted() {
     document.addEventListener('mousedown', this.startDrag);
@@ -186,16 +176,7 @@ export default {
     },
     endDrag() {
       this.isDragging = false;
-    },
-
-
-
-    toggleComponent() {
-      console.log("sjdohsjdg")
-      this.showForm = !this.showForm;
     }
   }
 };
-
-
 </script>

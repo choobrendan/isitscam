@@ -3,7 +3,7 @@ import './style.css'
 import App from './App.vue'
 //in your `main.js` file
 import '../node_modules/flowbite-vue/dist/index.css'
-import ScamCard from './components/ScamCard.vue'
+import App from './App.vue'
+import Sca from './components/ScamCard.vue'
 const app = createApp(App)
-app.component('scam-card',ScamCard)
 app.mount('#app')

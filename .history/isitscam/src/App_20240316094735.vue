@@ -1,7 +1,4 @@
 <template>
-    <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center "v-if="showForm">
-      <ScamForm class="absolute z-50"/>
-    </div>
   <div class="flex flex-row">
 
 
@@ -28,70 +25,31 @@
 
 </div>
 <div class="flex items-center justify-center w-full h-full">
-
 <textarea id="message" rows="4" class="resize-none block p-2.5 w-80 h-96 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
 </div>
 </div>
 
 <div class="drawer right" ref="drawer">
+  <div style="width: 100%;"><a href="#" class=" m-12 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">My boyfriend stole my other boyfriend!</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">Holy shit I was like bruh and then he got stolen like yk lorem ipsum and shit bla bla bla but yes it is a huge scam everyone please take note i beg yall pls do not fall into the same trap as me i have spent 100 hours awake I might as well change my name to Ooi Pei Yin yes we are at this point it is very sad</p>
+</a></div>  <div style="width: 100%;"><a href="#" class=" m-12 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">My boyfriend stole my other boyfriend!</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">Holy shit I was like bruh and then he got stolen like yk lorem ipsum and shit bla bla bla but yes it is a huge scam everyone please take note i beg yall pls do not fall into the same trap as me i have spent 100 hours awake I might as well change my name to Ooi Pei Yin yes we are at this point it is very sad</p>
+</a></div>  <div style="width: 100%;"><a href="#" class=" m-12 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
-
-  <!-- Add button -->
-<div class="button-add">
-  <button @click="toggleComponent" type="button" class="fixed bottom-6  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-4 text-center  items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-    <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M5 12h14m-7 7V5"/>
-</svg>
-
-<span class="sr-only">Icon description</span>
-</button>
-</div>
-
-
-<!-- Data populate -->
-
-<scam-card/>
-<scam-card/>
-<scam-card/>
-<scam-card/>
-<scam-card/>
-<scam-card/>
-<scam-card/>
-<scam-card/>
-<scam-card/>
-
-
-
-
-
-
-
-
-
-
-
-
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">My boyfriend stole my other boyfriend!</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">Holy shit I was like bruh and then he got stolen like yk lorem ipsum and shit bla bla bla but yes it is a huge scam everyone please take note i beg yall pls do not fall into the same trap as me i have spent 100 hours awake I might as well change my name to Ooi Pei Yin yes we are at this point it is very sad</p>
+</a></div>
 <div class="wrap">
     <div class="drag" ref="drag"></div></div>
   </div>
 
 </div>
-<div>
 
-  <button type="button" class="  m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Submit</button>
-</div>
-<div class="text-left"> <p class="text-gray-900  text-lg" >Result</p>
-
-  <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-    <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
-    
-  </div>
-  <p class="text-gray-900">Sounds like the stealing boyfriend scam</p>
-<p class="text-gray-900  text-lg" >Analytics</p>
-</div>
-
+  
 </template>
 
 <style>
@@ -111,9 +69,7 @@ body {
   
 }
 .wrap{
-  position: sticky;
-    bottom: 40%;
-
+  position: relative;
 
 }
 .drawer.right {
@@ -123,7 +79,7 @@ body {
   min-width: 400px;
 }
 .drag {
-  position: sticky;
+  position: absolute;
   top: 0;
   border: 1px solid #888;
   top: 50%;
@@ -138,27 +94,16 @@ body {
   left: unset;
   right: 0;
 }
-.button-add{
-
-  position: absolute;
-    left: 370px;
-
-}
 </style>
 
 <script>
-import ScamForm from './components/ScamForm.vue'
 export default {
   data() {
     return {
       isDragging: false,
       startX: 0,
-      startWidth: 0,
-      showForm: false,
+      startWidth: 0
     };
-  },
-  components: {
-    ScamForm // Register your component
   },
   mounted() {
     document.addEventListener('mousedown', this.startDrag);
@@ -186,16 +131,7 @@ export default {
     },
     endDrag() {
       this.isDragging = false;
-    },
-
-
-
-    toggleComponent() {
-      console.log("sjdohsjdg")
-      this.showForm = !this.showForm;
     }
   }
 };
-
-
 </script>

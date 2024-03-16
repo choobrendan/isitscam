@@ -1,7 +1,4 @@
 <template>
-    <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center "v-if="showForm">
-      <ScamForm class="absolute z-50"/>
-    </div>
   <div class="flex flex-row">
 
 
@@ -36,11 +33,9 @@
 <div class="drawer right" ref="drawer">
 
 
-
-
   <!-- Add button -->
 <div class="button-add">
-  <button @click="toggleComponent" type="button" class="fixed bottom-6  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-4 text-center  items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+  <button type="button" class="fixed bottom-6  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-4 text-center  items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
     <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M5 12h14m-7 7V5"/>
 </svg>
@@ -51,22 +46,38 @@
 
 
 <!-- Data populate -->
+  <div style="width: 100%;"><a href="#" class=" m-12 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
-<scam-card/>
-<scam-card/>
-<scam-card/>
-<scam-card/>
-<scam-card/>
-<scam-card/>
-<scam-card/>
-<scam-card/>
-<scam-card/>
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">My boyfriend stole my other boyfriend!</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">Holy shit I was like bruh and then he got stolen like yk lorem ipsum and shit bla bla bla but yes it is a huge scam everyone please take note i beg yall pls do not fall into the same trap as me i have spent 100 hours awake I might as well change my name to Ooi Pei Yin yes we are at this point it is very sad</p>
+</a></div>  <div style="width: 100%;"><a href="#" class=" m-12 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">My boyfriend stole my other boyfriend!</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">Holy shit I was like bruh and then he got stolen like yk lorem ipsum and shit bla bla bla but yes it is a huge scam everyone please take note i beg yall pls do not fall into the same trap as me i have spent 100 hours awake I might as well change my name to Ooi Pei Yin yes we are at this point it is very sad</p>
+</a></div>  <div style="width: 100%;"><a href="#" class=" m-12 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">My boyfriend stole my other boyfriend!</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">Holy shit I was like bruh and then he got stolen like yk lorem ipsum and shit bla bla bla but yes it is a huge scam everyone please take note i beg yall pls do not fall into the same trap as me i have spent 100 hours awake I might as well change my name to Ooi Pei Yin yes we are at this point it is very sad</p>
+</a></div>
+
+<div style="width: 100%;"><a href="#" class=" m-12 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">My boyfriend stole my other boyfriend!</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">Holy shit I was like bruh and then he got stolen like yk lorem ipsum and shit bla bla bla but yes it is a huge scam everyone please take note i beg yall pls do not fall into the same trap as me i have spent 100 hours awake I might as well change my name to Ooi Pei Yin yes we are at this point it is very sad</p>
+</a></div>
+
+<div style="width: 100%;"><a href="#" class=" m-12 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">My boyfriend stole my other boyfriend!</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">Holy shit I was like bruh and then he got stolen like yk lorem ipsum and shit bla bla bla but yes it is a huge scam everyone please take note i beg yall pls do not fall into the same trap as me i have spent 100 hours awake I might as well change my name to Ooi Pei Yin yes we are at this point it is very sad</p>
+</a></div>
 
 
+<div style="width: 100%;"><a href="#" class=" m-12 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
-
-
-
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">My boyfriend stole my other boyfriend!</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">Holy shit I was like bruh and then he got stolen like yk lorem ipsum and shit bla bla bla but yes it is a huge scam everyone please take note i beg yall pls do not fall into the same trap as me i have spent 100 hours awake I might as well change my name to Ooi Pei Yin yes we are at this point it is very sad</p>
+</a></div>
 
 
 
@@ -141,24 +152,19 @@ body {
 .button-add{
 
   position: absolute;
-    left: 370px;
+    left: 30px;
 
 }
 </style>
 
 <script>
-import ScamForm from './components/ScamForm.vue'
 export default {
   data() {
     return {
       isDragging: false,
       startX: 0,
-      startWidth: 0,
-      showForm: false,
+      startWidth: 0
     };
-  },
-  components: {
-    ScamForm // Register your component
   },
   mounted() {
     document.addEventListener('mousedown', this.startDrag);
@@ -186,16 +192,7 @@ export default {
     },
     endDrag() {
       this.isDragging = false;
-    },
-
-
-
-    toggleComponent() {
-      console.log("sjdohsjdg")
-      this.showForm = !this.showForm;
     }
   }
 };
-
-
 </script>
