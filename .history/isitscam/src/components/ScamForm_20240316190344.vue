@@ -1,7 +1,11 @@
 <template>
-<div class="bg-gray-50 rounded-xl h-4/5 w-4/5 shadow-xl">
-    <p class="text-gray-900">Fill up your scam here!!!!!!!!</p>
-</div>
+<div class="bg-gray-50 rounded-xl h-4/5 w-4/5 shadow-xl"></div>
+<p class="text-gray-900">Fill up your scam here!!!!!!!!</p>
+
+
+
+
+
 
 </template>
 
