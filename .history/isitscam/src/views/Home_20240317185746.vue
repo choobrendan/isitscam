@@ -114,7 +114,7 @@ body {
 .drawer.right {
   right: 0px;
   bottom: 0px;
-  min-width: 35px;
+  min-width: 20px;
   width: 36px;
   max-width: 560px;
   overflow-x: hidden;

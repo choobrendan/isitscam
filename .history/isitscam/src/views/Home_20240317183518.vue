@@ -79,12 +79,7 @@
     <p class="text-gray-900  text-lg" >Analytics</p>
   </div>
   
-  <div class="">
-
-<img  class=" arrow h-16 absolute right-10"src="../assets/arrow.png">
-<div class=" arrow-text right-28 text-gray-900">
-<p class="">  Open here for</p><p> more stuff!</p></div>
-  </div>
+  
 </template>
 
 <style>
@@ -114,7 +109,7 @@ body {
 .drawer.right {
   right: 0px;
   bottom: 0px;
-  min-width: 35px;
+  min-width: 20px;
   width: 36px;
   max-width: 560px;
   overflow-x: hidden;
@@ -142,16 +137,6 @@ body {
 position: fixed;
 
 margin: 400px;
-}
-.arrow{
-
-position: absolute;
-  top:calc(50% - 65px)
-}
-.arrow-text{
-
-position: absolute;
-  top:calc(50% - 20px)
 }
 </style>
 
