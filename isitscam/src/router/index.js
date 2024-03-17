@@ -5,8 +5,8 @@ import Main from '../views/Main.vue'
 import Report from '../views/Report.vue'
 
 const routes = [
-  { path: '/', name: 'Home', component: Home  },
-  { path: '/main', name: 'Main', component: Main },
+  { path: '/', name: 'Main', component: Main },
+  { path: '/home', name: 'Home', component: Home  },
   { path: '/report', name: 'Report', component: Report },
 ]
 
