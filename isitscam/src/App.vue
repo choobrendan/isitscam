@@ -41,7 +41,15 @@
         <scam-card v-for="i in 7" :key="i" />
       </div>  
       <div class="wrap">
-        <div class="drag" ref="drag"></div>
+        <div class="drag" ref="drag">
+          <svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" transform="rotate(90)" stroke="#000000" stroke-width="0.034">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier"> 
+              <path d="M17 6v1h-17v-1h17zM0 10h17v-1h-17v1z" fill="#000000"></path> 
+            </g>
+          </svg>
+        </div>
       </div>
       </div>
   </div>
@@ -105,9 +113,12 @@ body {
   top: 50%;
   left: 0;
   width: 20px;
-  height: 100px;
+  height: 100vh;
   background: #aaa;
-  cursor: ew-resize; 
+  cursor: ew-resize;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
   
 }
 .drawer.left .drag {
