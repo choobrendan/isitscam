@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
   <div >
 <div class="flex flex-row">
@@ -12,12 +8,11 @@
   <p>Peepeepoopoo</p>
   <p>Poopoopeeoee</p>
   
-<a href="/pages/main">
+<a href="/home">
     <button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">More I guess</button>
   </a>
 </div>
 <div>
-  <router-link to-main></router-link>
 <div class="flex items-center justify-center w-full">
     <label for="dropzone-file" class="flex flex-col items-center justify-center w-96 h-96 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-200 dark:bg-gray-50 hover:bg-gray-100 dark:border-gray-200 dark:hover:border-gray-100 dark:hover:bg-gray-100">
         <div class="flex flex-col items-center justify-center pt-5 pb-6">
