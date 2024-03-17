@@ -41,30 +41,33 @@
       <h1 class="mx-12 mt-10">Discover Scams</h1>
       <!-- Data populate -->
       <!-- lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 -->
-      <div class="grid grid-col m-10 gap-8">
+      <div class="grid grid-col justify-center align-middle m-12 gap-8">
         <scam-card v-for="i in 7" :key="i" />
       </div>  
       <div class="wrap">
-          <div class="drag" ref="drag">
-            <svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" transform="rotate(90)" stroke="#000000" stroke-width="0.034">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier"> 
-                <path d="M17 6v1h-17v-1h17zM0 10h17v-1h-17v1z" fill="#000000"></path> 
-              </g>
-            </svg>
-          </div>
+        <div class="drag" ref="drag">
+          <svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" transform="rotate(90)" stroke="#000000" stroke-width="0.034">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier"> 
+              <path d="M17 6v1h-17v-1h17zM0 10h17v-1h-17v1z" fill="#000000"></path> 
+            </g>
+          </svg>
         </div>
-        <!-- Add button -->
-  <div class="button-add">
-    <button @click="toggleComponent" type="button" class=" fixed bottom-6 z-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-4 text-center  items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-      <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M5 12h14m-7 7V5"/>
-      </svg>
-      <span class="sr-only">Icon description</span>
-    </button>
-  </div>
+      </div>
+        
+      <!-- Add button -->
+      <div class="button-add">
+        <button @click="toggleComponent" type="button" class=" fixed bottom-6 z-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-4 text-center  items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M5 12h14m-7 7V5"/>
+          </svg>
+          <span class="sr-only">Icon description</span>
+        </button>
+      </div>
+
     </div>
+
   </div>
 
   <div>
@@ -140,13 +143,11 @@ body {
   right: 0;
 }
 .button-add{
-position: fixed;
-
-margin: 400px;
+  position: fixed;
+  margin: 400px;
 }
 .arrow{
-
-position: absolute;
+  position: absolute;
   top:calc(50% - 65px)
 }
 .arrow-text{
