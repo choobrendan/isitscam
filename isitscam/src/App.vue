@@ -34,19 +34,15 @@
     
     <!-- Drawer -->
     <div class="drawer right" ref="drawer">
+      <h1>Report</h1>
       <!-- Data populate -->
-      <scam-card/>
-      <scam-card/>
-      <scam-card/>
-      <scam-card/>
-      <scam-card/>
-      <scam-card/>
-      <scam-card/>
-      <scam-card/>
-      <scam-card/>
-      
+      <!-- lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 -->
+      <div class="grid grid-col ">
+        <scam-card v-for="i in 7" :key="i" />
+      </div>  
       <div class="wrap">
-        <div class="drag" ref="drag"></div></div>
+        <div class="drag" ref="drag"></div>
+      </div>
       </div>
   </div>
 
