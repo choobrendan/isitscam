@@ -1,4 +1,4 @@
 <template>
   <h1>Report</h1>
-  <router-link to="/">Back</router-link>
+  <router-link to="/home">Back</router-link>
 </template>
