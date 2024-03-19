@@ -7,7 +7,7 @@
       <button type="button" @click="toggleComponent" class=" m-4  text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Submit</button></div>
     </div>
   </div>
-  <div class="submit-data" v-if="showSubmit">
+  <div class="submit-data" v-if="showSubmit" @click="toggleSubmit">
   <div class="flex flex-row">
     <div class="flex flex-row items-center justify-center">
       <!-- Click to Upload -->
@@ -36,11 +36,11 @@
 
   </div>
 
-  <div  @click="toggleSubmit">
-    <button type="button"  class="  m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600   dark:focus:ring-gray-700">Submit</button>
+  <div>
+    <button type="button" class="  m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600   dark:focus:ring-gray-700">Submit</button>
   </div>
 </div>
-  <div class="h-full w-full analysis text-left" v-if="!showSubmit"> 
+  <div class="h-full w-full analysis text-left" v-if="!showSubmit" @click="toggleSubmit"> 
     <p class="text-gray-900  text-lg" >Result</p>
     <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
     </div>
@@ -94,8 +94,8 @@
 </div>
     </div>
     
-    <div class="text-center" @click="toggleSubmit">
-    <button type="button"  class="  m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600   dark:focus:ring-gray-700">Submit</button>
+    <div class="text-center">
+    <button type="button" class="  m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600   dark:focus:ring-gray-700">Submit</button>
   </div>
   </div>
   
@@ -111,10 +111,10 @@
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4H4m0 0v4m0-4 5 5m7-5h4m0 0v4m0-4-5 5M8 20H4m0 0v-4m0 4 5-5m7 5h4m0 0v-4m0 4-5-5"/>
         </svg>
       </router-link>
-      <h1 class="mx-12 mt-10">Discover Scams</h1>
+      <h1 class="mx-12 mt-8">Report</h1>
       <!-- Data populate -->
       <!-- lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 -->
-      <div class="grid grid-col justify-center align-middle m-12 gap-8">
+      <div class="grid grid-col ">
         <scam-card v-for="i in 7" :key="i" />
       </div>  
       <div class="wrap">
@@ -160,7 +160,6 @@ body {
 .wrap{
   position: fixed;
   height: 100%;
-  width:min-content;
   bottom: 0.0%;
 
  
@@ -193,11 +192,13 @@ body {
   right: 0;
 }
 .button-add{
-  position: fixed;
-  margin: 400px;
+position: fixed;
+
+margin: 400px;
 }
 .arrow{
-  position: absolute;
+
+position: absolute;
   top:calc(50% - 65px)
 }
 .arrow-text{

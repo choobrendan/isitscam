@@ -36,11 +36,11 @@
 
   </div>
 
-  <div  @click="toggleSubmit">
+  <div>
     <button type="button"  class="  m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600   dark:focus:ring-gray-700">Submit</button>
   </div>
 </div>
-  <div class="h-full w-full analysis text-left" v-if="!showSubmit"> 
+  <div class="h-full w-full analysis text-left" v-if="!showSubmit" @click="toggleSubmit"> 
     <p class="text-gray-900  text-lg" >Result</p>
     <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
     </div>
@@ -94,8 +94,8 @@
 </div>
     </div>
     
-    <div class="text-center" @click="toggleSubmit">
-    <button type="button"  class="  m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600   dark:focus:ring-gray-700">Submit</button>
+    <div class="text-center">
+    <button type="button" @click="toggleSubmit" class="  m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600   dark:focus:ring-gray-700">Submit</button>
   </div>
   </div>
   
