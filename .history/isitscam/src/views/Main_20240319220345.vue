@@ -79,7 +79,7 @@ min-width: 300px;
 export default {
   data() {
     return {
-      showSubmit:false,
+      showSubmit:true,
     };
   },
 methods: {

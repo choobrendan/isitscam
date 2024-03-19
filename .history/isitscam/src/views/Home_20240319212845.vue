@@ -1,7 +1,5 @@
 <template>
-  <a href="/">
-  <logo />
-</a>
+  <logo v-for="i in 7" :key="i" />
   <!-- Form dialog -->
   <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center  z-20"v-if="showForm">
     <ScamForm class="absolute z-20"/>
@@ -214,7 +212,7 @@ position: absolute;
 import ScamForm from '../components/ScamForm.vue'
 
 export default {
-  props: ['showSubmit'],
+
   data() {
     return {
       isDragging: false,

@@ -1,5 +1,5 @@
 <template>
-  <a href="/">
+  <a href="/home">
   <logo />
 </a>
   <!-- Form dialog -->
@@ -214,7 +214,7 @@ position: absolute;
 import ScamForm from '../components/ScamForm.vue'
 
 export default {
-  props: ['showSubmit'],
+
   data() {
     return {
       isDragging: false,

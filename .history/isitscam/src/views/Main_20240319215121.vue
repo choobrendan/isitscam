@@ -38,11 +38,9 @@
 </div>
 
 <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
-<a href="/home">
 <div class=" ">
       <button type="button" @click="toggleSubmit" class=" w-full my-4 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Submit</button>
   </div> 
-</a>
 </div>
 </div>
 </div>
@@ -77,13 +75,52 @@ min-width: 300px;
 
 <script>
 export default {
-  data() {
-    return {
-      showSubmit:false,
-    };
-  },
-methods: {
 
+data() {
+  return {
+    isDragging: false,
+    startX: 0,
+    startWidth: 0,
+    showForm: false,
+    showSubmit:true,
+  };
+},
+components: {
+  ScamForm // Register your component
+},
+mounted() {
+  document.addEventListener('mousedown', this.startDrag);
+  document.addEventListener('mousemove', this.drag);
+  document.addEventListener('mouseup', this.endDrag);
+},
+beforeDestroy() {
+  document.removeEventListener('mousedown', this.startDrag);
+  document.removeEventListener('mousemove', this.drag);
+  document.removeEventListener('mouseup', this.endDrag);
+},
+methods: {
+  startDrag(event) {
+    if (event.target === this.$refs.drag || event.target.parentNode === this.$refs.drag) {
+      this.isDragging = true;
+      this.startX = event.clientX;
+      this.startWidth = this.$refs.drawer.offsetWidth;
+    }
+  },
+  drag(event) {
+    if (this.isDragging) {
+      const newWidth = this.startWidth - (event.clientX - this.startX);
+      this.$refs.drawer.style.width = newWidth + 'px';
+    }
+  },
+  endDrag() {
+    this.isDragging = false;
+  },
+
+
+
+  toggleComponent() {
+    this.showForm = !this.showForm;
+  },
   toggleSubmit() {
     console.log(this.showSubmit)
     this.showSubmit = !this.showSubmit;

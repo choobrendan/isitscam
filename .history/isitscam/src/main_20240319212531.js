@@ -14,6 +14,6 @@ import Logo from './components/Logo.vue'
 
 const app = createApp(App)
 app.component('scam-card',ScamCard)
-app.component('logo',Logo)
+app.component('scam-card',ScamCard)
 app.use(router)
 app.mount('#app')

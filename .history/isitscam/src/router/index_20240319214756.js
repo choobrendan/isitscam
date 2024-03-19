@@ -6,11 +6,14 @@ import Report from '../views/Report.vue'
 
 const routes = [
   { path: '/', name: 'Main', component: Main },
-  { path: '/home', name: 'Home', component: Home, props: true }, // Define route prop for Home
+  { path: '/home', name: 'Home', component: Home  },
   { path: '/report', name: 'Report', component: Report },
 ]
 
 const router = createRouter({
+  params: {
+    items: data
+}
   history: createWebHistory(),
   routes,
 })
