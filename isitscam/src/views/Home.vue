@@ -111,10 +111,10 @@
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4H4m0 0v4m0-4 5 5m7-5h4m0 0v4m0-4-5 5M8 20H4m0 0v-4m0 4 5-5m7 5h4m0 0v-4m0 4-5-5"/>
         </svg>
       </router-link>
-      <h1 class="mx-12 mt-8">Report</h1>
+      <h1 class="mx-12 mt-10">Discover Scams</h1>
       <!-- Data populate -->
       <!-- lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 -->
-      <div class="grid grid-col ">
+      <div class="grid grid-col justify-center align-middle m-12 gap-8">
         <scam-card v-for="i in 7" :key="i" />
       </div>  
       <div class="wrap">
@@ -160,6 +160,7 @@ body {
 .wrap{
   position: fixed;
   height: 100%;
+  width:min-content;
   bottom: 0.0%;
 
  
@@ -192,13 +193,11 @@ body {
   right: 0;
 }
 .button-add{
-position: fixed;
-
-margin: 400px;
+  position: fixed;
+  margin: 400px;
 }
 .arrow{
-
-position: absolute;
+  position: absolute;
   top:calc(50% - 65px)
 }
 .arrow-text{

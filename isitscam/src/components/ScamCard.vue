@@ -1,7 +1,7 @@
 <template>
 
 <div style="width: 100%;">
-  <a href="#" class="text-left m-12 block max-w-md min-w-40 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+  <a href="#" class="text-left block max-w-md min-w-40 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
   <span 
     v-for="(chip, index) in chips" 
