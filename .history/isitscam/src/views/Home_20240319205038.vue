@@ -33,79 +33,7 @@
     </div>
     
     <!-- Drawer -->
-
-  </div>
-
-  <div>
-    <button type="button" class="  m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600   dark:focus:ring-gray-700">Submit</button>
-  </div>
-</div>
-  <div class="h-full w-full analysis text-left" v-if="!showSubmit" @click="toggleSubmit"> 
-    <p class="text-gray-900  text-lg" >Result</p>
-    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-    </div>
-    <p class="text-gray-900">Sounds like the stealing boyfriend scam</p>
-    <p class="text-gray-900  text-lg" >Analytics</p>
-    <div class="flex flex-row">
-      <div class="w-1/2">
-        <div class="m-2">
-    <p class="text-gray-900 ">Too Good to Be True:</p>
-    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
-      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
-    </div>
-  </div>
-  <div class="m-2">
-    <p class="text-gray-900 ">Urgency and Pressure:</p>
-    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
-      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
-    </div>
-  </div>
-  <div class="m-2">
-    <p class="text-gray-900 ">Unsolicited Communication:</p>
-    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
-      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
-    </div>
-  </div>
-  <div class="m-2">
-    <p class="text-gray-900 ">Unusual Payment Methods:</p>
-    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
-      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
-    </div>
-  </div>
-  </div><div class="w-1/2">
-      <div class="m-2">
-    <p class="text-gray-900 ">Poor Grammar and Spelling:</p>
-    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
-      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
-    </div>
-  </div>
-  <div class="m-2">
-    <p class="text-gray-900 ">Unsolicited Offers of Assistance:</p>
-    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
-      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
-    </div>
-  </div>
-  <div class="m-2">
-    <p class="text-gray-900 ">Unverified Sources:</p>
-    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
-      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
-    </div>
-  </div>
-</div>
-    </div>
-    
-    <div class="text-center">
-    <button type="button" class="  m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600   dark:focus:ring-gray-700">Submit</button>
-  </div>
-  </div>
-  
-  <div class="">
-
-<img  class=" arrow h-16 absolute right-10"src="../assets/arrow.png">
-<div class=" arrow-text right-28 text-gray-900">
-<p class="">  Open here for</p><p> more stuff!</p></div>
-  </div>
-  <div class="drawer right" ref="drawer">
+    <div class="drawer right" ref="drawer">
       <router-link to="/report" class="border-none absolute top-0 left-3 py-4 px-4 rounded">
         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4H4m0 0v4m0-4 5 5m7-5h4m0 0v4m0-4-5 5M8 20H4m0 0v-4m0 4 5-5m7 5h4m0 0v-4m0 4-5-5"/>
@@ -138,6 +66,62 @@
     </button>
   </div>
     </div>
+  </div>
+
+  <div>
+    <button type="button" class="  m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600   dark:focus:ring-gray-700">Submit</button>
+  </div>
+</div>
+  <div class="h-full w-full analysis text-left" v-if="!showSubmit" @click="toggleSubmit"> 
+    <p class="text-gray-900  text-lg" >Result</p>
+    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+    </div>
+    <p class="text-gray-900">Sounds like the stealing boyfriend scam</p>
+    <p class="text-gray-900  text-lg" >Analytics</p>
+    <div class="flex flex-row">
+      <div class="w-1/2">
+    <p class="text-gray-900 ">Too Good to Be True:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+    <p class="text-gray-900 ">Urgency and Pressure:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+    <p class="text-gray-900 ">Unsolicited Communication:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+    <p class="text-gray-900 ">Unusual Payment Methods:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+  </div><div class="w-1/2">
+    <div>
+    <p class="text-gray-900 ">Poor Grammar and Spelling:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+    <p class="text-gray-900 ">Unsolicited Offers of Assistance:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+    <p class="text-gray-900 ">Unverified Sources:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div></div>
+    </div>
+    <div class="text-center">
+    <button type="button" class="  m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600   dark:focus:ring-gray-700">Submit</button>
+  </div>
+  </div>
+  
+  <div class="">
+
+<img  class=" arrow h-16 absolute right-10"src="../assets/arrow.png">
+<div class=" arrow-text right-28 text-gray-900">
+<p class="">  Open here for</p><p> more stuff!</p></div>
+  </div>
 </template>
 
 <style>
