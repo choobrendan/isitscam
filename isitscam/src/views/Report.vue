@@ -112,7 +112,7 @@
 
 <script>
 export default {
-  name: "typeWiriter",
+  name: "Report",
   data: () => {
     return {
       typeValue: "",
