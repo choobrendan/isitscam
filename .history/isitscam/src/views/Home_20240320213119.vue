@@ -141,9 +141,8 @@
     </button>
   </div>
     </div>
-    <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center  z-20"  style="background-color: #eae6df;" v-if="whatsappClicked">
+    <div>
     <WhatsAppGame />
-    </div>
 </template>
 
 <style>

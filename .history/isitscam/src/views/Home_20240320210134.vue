@@ -141,9 +141,6 @@
     </button>
   </div>
     </div>
-    <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center  z-20"  style="background-color: #eae6df;" v-if="whatsappClicked">
-    <WhatsAppGame />
-    </div>
 </template>
 
 <style>
@@ -215,7 +212,7 @@ position: absolute;
 
 <script>
 import ScamForm from '../components/ScamForm.vue'
-import WhatsAppGame from '../components/WhatsAppGame.vue'
+
 export default {
   props: ['showSubmit'],
   data() {
@@ -225,11 +222,10 @@ export default {
       startWidth: 0,
       showForm: false,
       showSubmit:true,
-      whatsappClicked:false,
     };
   },
   components: {
-    ScamForm ,WhatsAppGame// Register your component
+    ScamForm // Register your component
   },
   mounted() {
     document.addEventListener('mousedown', this.startDrag);
@@ -270,9 +266,8 @@ export default {
     },
     handleWhatsappClick(value) {
       // Receive the value emitted from the ScamCard component
-      console.log(this.whatsappClicked)
       this.whatsappClicked = value;
-      console.log(this.whatsappClicked)
+      console.log()
       // Now you can use whatsappClicked variable in this component
     }
   }

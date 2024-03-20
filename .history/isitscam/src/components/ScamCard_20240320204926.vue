@@ -86,6 +86,7 @@ export default {
       if (chip.text === "WhatsApp") {
         console.log("Clicked on Whatsapp chip");
         this.$emit('whatsappClicked', true);
+
       }
     }
   }

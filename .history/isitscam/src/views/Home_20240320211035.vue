@@ -141,9 +141,7 @@
     </button>
   </div>
     </div>
-    <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center  z-20"  style="background-color: #eae6df;" v-if="whatsappClicked">
-    <WhatsAppGame />
-    </div>
+    <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center  z-20"v-if="showForm"></div>
 </template>
 
 <style>
@@ -225,11 +223,10 @@ export default {
       startWidth: 0,
       showForm: false,
       showSubmit:true,
-      whatsappClicked:false,
     };
   },
   components: {
-    ScamForm ,WhatsAppGame// Register your component
+    ScamForm,What // Register your component
   },
   mounted() {
     document.addEventListener('mousedown', this.startDrag);
@@ -270,7 +267,6 @@ export default {
     },
     handleWhatsappClick(value) {
       // Receive the value emitted from the ScamCard component
-      console.log(this.whatsappClicked)
       this.whatsappClicked = value;
       console.log(this.whatsappClicked)
       // Now you can use whatsappClicked variable in this component

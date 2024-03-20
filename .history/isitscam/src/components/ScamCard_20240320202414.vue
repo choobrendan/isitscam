@@ -8,7 +8,7 @@
     :key="index"
     :class="`text-xs font-medium me-2 px-2.5 py-0.5 mb-4 rounded-full dark:text-blue-300 ${chip.bgColor} ${chip.textColor}` 
     "
-    @click="handleChipClick(chip)"
+    @click="handleChipClick(chip)""
   >
     {{ chip.text }}
   </span>
@@ -67,7 +67,7 @@ export default {
       title: 'My boyfriend stole my other boyfriend!',
       description: "Holy shit I was like bruh and then he got stolen like yk lorem ipsum and shit bla bla bla but yes it is a huge scam everyone please take note i beg yall pls do not fall into the same trap as me i have spent 100 hours awake I might as well change my name to Ooi Pei Yin yes we are at this point it is very sad",
       chips: [
-        { text: 'WhatsApp', bgColor: 'bg-blue-100', textColor: 'text-blue-800' },
+        { text: 'Facebook', bgColor: 'bg-blue-100', textColor: 'text-blue-800' },
         { text: 'Scam', bgColor: 'bg-yellow-100', textColor: 'text-yellow-800' },
         { text: 'Danger', bgColor: 'bg-red-100', textColor: 'text-red-800' },
       ]
@@ -80,12 +80,6 @@ export default {
     downvote() {
       if (this.count > 0) {
         this.count--;
-      }
-    },
-    handleChipClick(chip) {
-      if (chip.text === "WhatsApp") {
-        console.log("Clicked on Whatsapp chip");
-        this.$emit('whatsappClicked', true);
       }
     }
   }

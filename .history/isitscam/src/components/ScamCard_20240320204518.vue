@@ -83,9 +83,9 @@ export default {
       }
     },
     handleChipClick(chip) {
+      // Check if the clicked chip has the text "Whatsapp"
       if (chip.text === "WhatsApp") {
         console.log("Clicked on Whatsapp chip");
-        this.$emit('whatsappClicked', true);
       }
     }
   }
