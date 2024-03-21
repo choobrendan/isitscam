@@ -71,7 +71,7 @@
   </div>
   <div class="w-full relative">
   <div id="imageUpload" contenteditable="true" v-if="showPaste" @paste="handlePaste"></div>
-  <div class="absolute top-1/2 w-full"><p disabled="disabled" >or <strong>copy</strong> an image and <br><strong>Crtl+V!</strong></p></div>
+  <div class="absolute top-1/2 width"><p disabled="disabled" >or <strong>copy</strong> an image and <br><strong>Crtl+V!</strong></p></div>
 </div>
 
 </div>

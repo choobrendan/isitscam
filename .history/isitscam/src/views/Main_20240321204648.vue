@@ -54,28 +54,22 @@
   </div>
 </div>
 <div>
-  <div class="flex flex-row w-96 ">
-  <div v-if=showUpload class="flex items-center justify-center w-full">
-       <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-60 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-200 dark:bg-gray-50 hover:bg-gray-100 dark:border-gray-200 dark:hover:border-gray-100 dark:hover:bg-gray-100">
+  <div class="flex items-center justify-center w-full">
+    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
       <div class="flex flex-col items-center justify-center pt-5 pb-6">
-        <svg v-if="!fileName" class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+        <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
         </svg>
+        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
         <img v-if="imageData" :src="imageData" alt="Uploaded image" class="w-32 h-32 mb-2" />
-        <p v-if="!fileName" class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
-        <p v-if="fileName" class="text-xs text-gray-500 dark:text-gray-400">{{ fileName }}</p>
-        <p v-if="!fileName" class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+        <p v-if="fileName" class="mb-2 text-xs text-gray-500 dark:text-gray-400">{{ fileName }}</p>
+        <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
       </div>
-      <input id="dropzone-file" type="file" class="hidden" @change="handleFileUpload" />
+      <input id="dropzone-file" type="file" class="hidden" @change="handleFileUpload" @paste="handlePaste" />
     </label>
   </div>
-  <div class="w-full relative">
-  <div id="imageUpload" contenteditable="true" v-if="showPaste" @paste="handlePaste"></div>
-  <div class="absolute top-1/2 w-full"><p disabled="disabled" >or <strong>copy</strong> an image and <br><strong>Crtl+V!</strong></p></div>
-</div>
 
-</div>
-  <div>
+<div>
 
 <p>or</p>
 
@@ -179,7 +173,7 @@ min-width: 300px;
 
 .tri-right.btm-left:after {
   left: -10px;
-  border-left-color:  rgb(249 250 251 );
+  border-left-color: rgb(255, 255, 255);
 }
 
 .tri-right.btm-right:after {
@@ -187,43 +181,6 @@ min-width: 300px;
   border-left-color: rgb(186, 186, 186);
 }
 
-
-
-#imageUpload {
-  border-style: dashed;
-    border-width: 2px;
-    border-radius: 0.5rem;
-   background-color:#fff;
-   width:100%;
-   height:240px;
-   position:relative;
-   text-align:center;
-   line-height:5vh;
-   outline:0 none;
-   overflow:hidden;
-   display:flex;
-   justify-content:center;
-   align-items:center;
-   
-   &:empty::before {
-      content:'Click this ContentEditable div to give it focus, then paste (Ctrl+V/⌘+V).';
-      font-size:3vh;
-      position:absolute;
-      width:90%;
-      display:inline-block;
-      color:#ccc;
-      top:50%;
-      transform:translatey(-50%);
-      left:5%;
-      z-index:-1;
-      
-   }
-   
-   /* Hide the default text onFocus */
-   &:focus::before{
-      color:transparent;
-   }
-}
 
 </style>
 
@@ -234,8 +191,6 @@ export default {
       fileName: null,
       imageData: null,
       showSubmit:false,
-      showPaste:true,
-      showUpload:true,
     };
   },
 methods: {
@@ -243,7 +198,6 @@ methods: {
   toggleSubmit() {
     console.log(this.showSubmit)
     this.showSubmit = !this.showSubmit;
-    
   },
   handleFileUpload(event) {
       const file = event.target.files[0];
@@ -254,26 +208,10 @@ methods: {
           this.imageData = reader.result;
         };
         reader.readAsDataURL(file);
-        this.showPaste = !this.showPaste;
       } else {
         this.fileName = null;
         this.imageData = null;
-        
       }
-    },
-    handlePaste(event) {
-      let cbPayload = [...(event.clipboardData || event.originalEvent.clipboardData).items];
-      cbPayload = cbPayload.filter(item => /image/.test(item.type));
-
-      if (!cbPayload.length || cbPayload.length === 0) return false;
-
-      let reader = new FileReader();
-      reader.onload = (e) => {
-        this.$refs.imageUpload.innerHTML = `<img src="${e.target.result}">`;
-        
-      };
-      reader.readAsDataURL(cbPayload[0].getAsFile());
-      this.showUpload=!this.showUpload;
     }
 }
 };

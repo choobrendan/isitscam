@@ -59,7 +59,6 @@
     <ScamPercent></ScamPercent>
     <ScamPercent></ScamPercent>
     <ScamPercent></ScamPercent>
-    <ScamPercent></ScamPercent>
 </div>
     </div>
     

@@ -51,15 +51,44 @@
     <p class="text-gray-900  text-lg" >Analytics</p>
     <div class="flex flex-row">
       <div class="w-1/2">
-<ScamPercent></ScamPercent>
-<ScamPercent></ScamPercent>
-<ScamPercent></ScamPercent>
-<ScamPercent></ScamPercent>
+
+  <div class="m-2">
+    <p class="text-gray-900 ">Urgency and Pressure:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+  </div>
+  <div class="m-2">
+    <p class="text-gray-900 ">Unsolicited Communication:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+  </div>
+  <div class="m-2">
+    <p class="text-gray-900 ">Unusual Payment Methods:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+  </div>
   </div><div class="w-1/2">
-    <ScamPercent></ScamPercent>
-    <ScamPercent></ScamPercent>
-    <ScamPercent></ScamPercent>
-    <ScamPercent></ScamPercent>
+      <div class="m-2">
+    <p class="text-gray-900 ">Poor Grammar and Spelling:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+  </div>
+  <div class="m-2">
+    <p class="text-gray-900 ">Unsolicited Offers of Assistance:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+  </div>
+  <div class="m-2">
+    <p class="text-gray-900 ">Unverified Sources:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+  </div>
 </div>
     </div>
     
@@ -186,7 +215,6 @@ position: absolute;
 <script>
 import ScamForm from '../components/ScamForm.vue'
 import WhatsAppGame from '../components/WhatsAppGame.vue'
-import ScamPercent from '../components/ScamPercent.vue'
 export default {
   props: ['showSubmit'],
   data() {
@@ -200,7 +228,7 @@ export default {
     };
   },
   components: {
-    ScamForm ,WhatsAppGame,ScamPercent// Register your component
+    ScamForm ,WhatsAppGame// Register your component
   },
   mounted() {
     document.addEventListener('mousedown', this.startDrag);

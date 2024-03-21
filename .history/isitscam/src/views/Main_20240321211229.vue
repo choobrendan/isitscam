@@ -55,7 +55,7 @@
 </div>
 <div>
   <div class="flex flex-row w-96 ">
-  <div v-if=showUpload class="flex items-center justify-center w-full">
+  <div class="flex items-center justify-center w-full">
        <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-60 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-200 dark:bg-gray-50 hover:bg-gray-100 dark:border-gray-200 dark:hover:border-gray-100 dark:hover:bg-gray-100">
       <div class="flex flex-col items-center justify-center pt-5 pb-6">
         <svg v-if="!fileName" class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
@@ -69,13 +69,8 @@
       <input id="dropzone-file" type="file" class="hidden" @change="handleFileUpload" />
     </label>
   </div>
-  <div class="w-full relative">
-  <div id="imageUpload" contenteditable="true" v-if="showPaste" @paste="handlePaste"></div>
-  <div class="absolute top-1/2 w-full"><p disabled="disabled" >or <strong>copy</strong> an image and <br><strong>Crtl+V!</strong></p></div>
-</div>
-
-</div>
-  <div>
+  <div id="imageUpload" contenteditable="true" v-if="showPaste" @paste="handlePaste"></div></div>
+<div>
 
 <p>or</p>
 
@@ -194,6 +189,7 @@ min-width: 300px;
     border-width: 2px;
     border-radius: 0.5rem;
    background-color:#fff;
+   margin: 50px auto;
    width:100%;
    height:240px;
    position:relative;
@@ -235,7 +231,7 @@ export default {
       imageData: null,
       showSubmit:false,
       showPaste:true,
-      showUpload:true,
+      showPaste:true,
     };
   },
 methods: {
@@ -273,7 +269,6 @@ methods: {
         
       };
       reader.readAsDataURL(cbPayload[0].getAsFile());
-      this.showUpload=!this.showUpload;
     }
 }
 };

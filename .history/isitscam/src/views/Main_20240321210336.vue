@@ -54,9 +54,9 @@
   </div>
 </div>
 <div>
-  <div class="flex flex-row w-96 ">
-  <div v-if=showUpload class="flex items-center justify-center w-full">
-       <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-60 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-200 dark:bg-gray-50 hover:bg-gray-100 dark:border-gray-200 dark:hover:border-gray-100 dark:hover:bg-gray-100">
+  <div class="flex flex-row">
+  <div class="flex items-center justify-center w-48">
+       <label for="dropzone-file" class="flex flex-col items-center justify-center w-48 h-60 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-200 dark:bg-gray-50 hover:bg-gray-100 dark:border-gray-200 dark:hover:border-gray-100 dark:hover:bg-gray-100">
       <div class="flex flex-col items-center justify-center pt-5 pb-6">
         <svg v-if="!fileName" class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
@@ -69,13 +69,8 @@
       <input id="dropzone-file" type="file" class="hidden" @change="handleFileUpload" />
     </label>
   </div>
-  <div class="w-full relative">
-  <div id="imageUpload" contenteditable="true" v-if="showPaste" @paste="handlePaste"></div>
-  <div class="absolute top-1/2 w-full"><p disabled="disabled" >or <strong>copy</strong> an image and <br><strong>Crtl+V!</strong></p></div>
-</div>
-
-</div>
-  <div>
+  <div id="imageUpload" contenteditable="true" @paste="handlePaste"></div></div>
+<div>
 
 <p>or</p>
 
@@ -179,7 +174,7 @@ min-width: 300px;
 
 .tri-right.btm-left:after {
   left: -10px;
-  border-left-color:  rgb(249 250 251 );
+  border-left-color: rgb(255, 255, 255);
 }
 
 .tri-right.btm-right:after {
@@ -190,11 +185,11 @@ min-width: 300px;
 
 
 #imageUpload {
-  border-style: dashed;
-    border-width: 2px;
-    border-radius: 0.5rem;
+   border:4px dotted black;
    background-color:#fff;
-   width:100%;
+   margin: 50px auto;
+   width:50vw;
+   max-width:192px;
    height:240px;
    position:relative;
    text-align:center;
@@ -234,8 +229,6 @@ export default {
       fileName: null,
       imageData: null,
       showSubmit:false,
-      showPaste:true,
-      showUpload:true,
     };
   },
 methods: {
@@ -243,7 +236,6 @@ methods: {
   toggleSubmit() {
     console.log(this.showSubmit)
     this.showSubmit = !this.showSubmit;
-    
   },
   handleFileUpload(event) {
       const file = event.target.files[0];
@@ -254,11 +246,9 @@ methods: {
           this.imageData = reader.result;
         };
         reader.readAsDataURL(file);
-        this.showPaste = !this.showPaste;
       } else {
         this.fileName = null;
         this.imageData = null;
-        
       }
     },
     handlePaste(event) {
@@ -270,10 +260,8 @@ methods: {
       let reader = new FileReader();
       reader.onload = (e) => {
         this.$refs.imageUpload.innerHTML = `<img src="${e.target.result}">`;
-        
       };
       reader.readAsDataURL(cbPayload[0].getAsFile());
-      this.showUpload=!this.showUpload;
     }
 }
 };

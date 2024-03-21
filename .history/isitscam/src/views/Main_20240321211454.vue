@@ -69,13 +69,8 @@
       <input id="dropzone-file" type="file" class="hidden" @change="handleFileUpload" />
     </label>
   </div>
-  <div class="w-full relative">
-  <div id="imageUpload" contenteditable="true" v-if="showPaste" @paste="handlePaste"></div>
-  <div class="absolute top-1/2 w-full"><p disabled="disabled" >or <strong>copy</strong> an image and <br><strong>Crtl+V!</strong></p></div>
-</div>
-
-</div>
-  <div>
+  <div id="imageUpload" contenteditable="true" v-if="showPaste" @paste="handlePaste"><p></p></div></div>
+<div>
 
 <p>or</p>
 
@@ -194,6 +189,7 @@ min-width: 300px;
     border-width: 2px;
     border-radius: 0.5rem;
    background-color:#fff;
+   margin: 50px auto;
    width:100%;
    height:240px;
    position:relative;

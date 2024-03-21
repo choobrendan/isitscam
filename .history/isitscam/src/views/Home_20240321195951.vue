@@ -51,15 +51,50 @@
     <p class="text-gray-900  text-lg" >Analytics</p>
     <div class="flex flex-row">
       <div class="w-1/2">
-<ScamPercent></ScamPercent>
-<ScamPercent></ScamPercent>
-<ScamPercent></ScamPercent>
-<ScamPercent></ScamPercent>
+        <div class="m-2">
+          <div></div>
+    <p class="text-gray-900 ">Too Good to Be True:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+  </div>
+  <div class="m-2">
+    <p class="text-gray-900 ">Urgency and Pressure:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+  </div>
+  <div class="m-2">
+    <p class="text-gray-900 ">Unsolicited Communication:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+  </div>
+  <div class="m-2">
+    <p class="text-gray-900 ">Unusual Payment Methods:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+  </div>
   </div><div class="w-1/2">
-    <ScamPercent></ScamPercent>
-    <ScamPercent></ScamPercent>
-    <ScamPercent></ScamPercent>
-    <ScamPercent></ScamPercent>
+      <div class="m-2">
+    <p class="text-gray-900 ">Poor Grammar and Spelling:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+  </div>
+  <div class="m-2">
+    <p class="text-gray-900 ">Unsolicited Offers of Assistance:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+  </div>
+  <div class="m-2">
+    <p class="text-gray-900 ">Unverified Sources:</p>
+    <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="bg-blue-600 text-lg font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 69%"> 69%</div>
+    </div>
+  </div>
 </div>
     </div>
     
@@ -178,7 +213,32 @@ position: absolute;
   top:calc(50% - 20px)
 }
 
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
 
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 
 
 </style>
@@ -186,7 +246,6 @@ position: absolute;
 <script>
 import ScamForm from '../components/ScamForm.vue'
 import WhatsAppGame from '../components/WhatsAppGame.vue'
-import ScamPercent from '../components/ScamPercent.vue'
 export default {
   props: ['showSubmit'],
   data() {
@@ -200,7 +259,7 @@ export default {
     };
   },
   components: {
-    ScamForm ,WhatsAppGame,ScamPercent// Register your component
+    ScamForm ,WhatsAppGame// Register your component
   },
   mounted() {
     document.addEventListener('mousedown', this.startDrag);
