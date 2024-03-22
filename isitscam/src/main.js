@@ -11,9 +11,11 @@ import router from './router/index.js'
 // Components
 import ScamCard from './components/ScamCard.vue'
 import Logo from './components/Logo.vue'
+import Navbar from './components/Navbar.vue'
 
 const app = createApp(App)
 app.component('scam-card',ScamCard)
 app.component('logo',Logo)
+app.component('navbar',Navbar)
 app.use(router)
 app.mount('#app')
