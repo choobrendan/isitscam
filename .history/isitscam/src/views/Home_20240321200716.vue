@@ -1,5 +1,7 @@
 <template>
-
+  <a href="/">
+  <logo />
+</a>
   <!-- Form dialog -->
   <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center  z-20"v-if="showForm">
     <ScamForm class="absolute z-20"/>
@@ -54,7 +56,6 @@
 <ScamPercent></ScamPercent>
 <ScamPercent></ScamPercent>
   </div><div class="w-1/2">
-    <ScamPercent></ScamPercent>
     <ScamPercent></ScamPercent>
     <ScamPercent></ScamPercent>
     <ScamPercent></ScamPercent>
