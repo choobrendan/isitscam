@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
-    <router-link to="/home" class="border-none font-medium text-sm ml-0.5 mb-2 rounded">
+  <div class="container mt-8">
+    <!-- <router-link to="/home" class="border-none font-medium text-sm ml-0.5 mb-2 rounded">
       << Back
-    </router-link>
+    </router-link> -->
     <h1>isitScam Discovery</h1>
     <p>
       Be informed. Share your experience. Help others avoid scams like 
@@ -12,6 +12,7 @@
     </p>
 
     <!-- Search Bar -->
+    <!-- TODO: fix search bar that scrolls over navbar -->
     <form class="w-full mx-auto my-4">
       <div class="flex">
           <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories 
