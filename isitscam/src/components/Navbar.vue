@@ -7,16 +7,16 @@
     </template>
     <template #default="{ isShowMenu }">
       <fwb-navbar-collapse :is-show-menu="isShowMenu">
-        <fwb-navbar-link link="report"> What is Scam? </fwb-navbar-link>
+        <fwb-navbar-link link="/report"> What is Scam? </fwb-navbar-link>
         <fwb-navbar-link link="/home"> Scam Detection </fwb-navbar-link>
-        <fwb-navbar-link link="report"> Discover </fwb-navbar-link>
+        <fwb-navbar-link link="/report"> Discover </fwb-navbar-link>
       </fwb-navbar-collapse>
     </template>
     <template #right-side>
       <fwb-navbar-collapse :is-show-menu="isShowMenu">
-        <fwb-navbar-link link="report"> Log In </fwb-navbar-link>
+        <fwb-navbar-link link="/login"> Log In </fwb-navbar-link>
       </fwb-navbar-collapse>
-      <fwb-button class="my-auto h-10 items-center"> Sign Up </fwb-button>
+      <fwb-button href="/register" class="text-white my-auto h-10 items-center"> Sign Up </fwb-button>
     </template>
   </fwb-navbar>
 </template>
