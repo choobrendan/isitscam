@@ -1,5 +1,6 @@
 [
   {
+    "count": "3",
     "title": "Phishing Scam on Facebook",
     "description": "Beware of phishing attempts on Facebook. Scammers may send fake messages pretending to be from trusted sources.",
     "image": "https://placehold.co/600x400",
@@ -88,6 +89,75 @@
     "chips": [
       { "text": "SMS", "bgColor": "bg-blue-600", "textColor": "text-white" },
       { "text": "Phishing", "bgColor": "bg-red-500", "textColor": "text-white" }
+    ]
+  },
+  {
+    "title": "Facebook Investment Scam",
+    "description": "Scammers may use Facebook to promote fraudulent investment schemes. Exercise caution and research thoroughly before investing.",
+    "image": "",
+    "chips": [
+      {
+        "text": "Facebook",
+        "bgColor": "bg-green-500",
+        "textColor": "text-white"
+      },
+      {
+        "text": "Investment",
+        "bgColor": "bg-yellow-500",
+        "textColor": "text-black"
+      }
+    ]
+  },
+  {
+    "title": "SMS Phishing Scam",
+    "description": "Be wary of SMS messages containing links or requests for personal information. These could be phishing attempts aimed at stealing your data.",
+    "image": "https://placehold.co/600x400",
+    "chips": [
+      { "text": "SMS", "bgColor": "bg-blue-600", "textColor": "text-white" },
+      { "text": "Phishing", "bgColor": "bg-red-500", "textColor": "text-white" }
+    ]
+  },
+  {
+    "title": "Facebook Investment Scam",
+    "description": "Scammers may use Facebook to promote fraudulent investment schemes. Exercise caution and research thoroughly before investing.",
+    "image": "",
+    "chips": [
+      {
+        "text": "Facebook",
+        "bgColor": "bg-green-500",
+        "textColor": "text-white"
+      },
+      {
+        "text": "Investment",
+        "bgColor": "bg-yellow-500",
+        "textColor": "text-black"
+      }
+    ]
+  },
+  {
+    "title": "SMS Phishing Scam",
+    "description": "Be wary of SMS messages containing links or requests for personal information. These could be phishing attempts aimed at stealing your data.",
+    "image": "https://placehold.co/600x400",
+    "chips": [
+      { "text": "SMS", "bgColor": "bg-blue-600", "textColor": "text-white" },
+      { "text": "Phishing", "bgColor": "bg-red-500", "textColor": "text-white" }
+    ]
+  },
+  {
+    "title": "Facebook Investment Scam",
+    "description": "Scammers may use Facebook to promote fraudulent investment schemes. Exercise caution and research thoroughly before investing.",
+    "image": "",
+    "chips": [
+      {
+        "text": "Facebook",
+        "bgColor": "bg-green-500",
+        "textColor": "text-white"
+      },
+      {
+        "text": "Investment",
+        "bgColor": "bg-yellow-500",
+        "textColor": "text-black"
+      }
     ]
   }
 ]
