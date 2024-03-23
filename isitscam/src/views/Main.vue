@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-row gap-6 mt-6">
-      <div class="">
+  <div class="flex flex-row gap-6 mt-6">
+    <div class="">
       <div class="flex flex-col chat-container">
         <div class="flex">
           <div class="px-10 w-full">
@@ -9,7 +9,9 @@
             </div>
             <div class="talk-bubble left tri-right round btm-left">
               <div class="talktext">
-                <p>Your IRS tax refund is pending acceptance. Must accept within 24 hours:
+                <p>
+                  Your IRS tax refund is pending acceptance. Must accept within
+                  24 hours:
                   <a>http://suslink.com</a>
                 </p>
               </div>
@@ -17,15 +19,15 @@
             <div class="flex items-center justify-end">
               <div class="talk-bubble right tri-right round btm-right">
                 <div class="talktext">
-<<<<<<< HEAD
+                  <<<<<<< HEAD
                   <p>
                     Your IRS tax refund is pending acceptance. Must accept
                     within 24 hours:
                     <a>http://suslink.com</a>
                   </p>
-=======
+                  =======
                   <p>This is sus... 🤔</p>
->>>>>>> 3e87bc2bca2f7996f0e57968734ff897ce3af142
+                  >>>>>>> 3e87bc2bca2f7996f0e57968734ff897ce3af142
                 </div>
               </div>
             </div>
@@ -64,14 +66,14 @@
                       </svg>
                     </div>
                   </div>
-              </button>
-            </a>
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      </div>
       <div>
-<<<<<<< HEAD
+        <<<<<<< HEAD
         <div class="flex flex-row w-96">
           <div
             v-if="showUpload"
@@ -235,15 +237,15 @@ fwb-file-input {
 }
 
 .talk-bubble.left {
-background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 .talk-bubble.right {
-background-color: rgb(186, 186, 186);
+  background-color: rgb(186, 186, 186);
 }
 
 .round {
-border-radius: 8px;
+  border-radius: 8px;
 }
 
 .tri-right.btm-left:after,
@@ -263,98 +265,94 @@ border-radius: 8px;
 }
 
 .tri-right.btm-right:after {
-right: -10px;
-border-left-color: rgb(186, 186, 186);
+  right: -10px;
+  border-left-color: rgb(186, 186, 186);
 }
 
 #imageUpload {
   border-style: dashed;
   border-width: 2px;
   border-radius: 0.5rem;
-  background-color:#fff;
-  width:100%;
-  height:240px;
-  position:relative;
-  text-align:center;
-  line-height:5vh;
-  outline:0 none;
-  overflow:hidden;
-  display:flex;
-  justify-content:center;
-  align-items:center;
- 
+  background-color: #fff;
+  width: 100%;
+  height: 240px;
+  position: relative;
+  text-align: center;
+  line-height: 5vh;
+  outline: 0 none;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &:empty::before {
-    content:'Click this ContentEditable div to give it focus, then paste (Ctrl+V/⌘+V).';
-    font-size:3vh;
-    position:absolute;
-    width:90%;
-    display:inline-block;
-    color:#ccc;
-    top:50%;
-    transform:translatey(-50%);
-    left:5%;
-    z-index:-1;
-    
+    content: "Click this ContentEditable div to give it focus, then paste (Ctrl+V/⌘+V).";
+    font-size: 3vh;
+    position: absolute;
+    width: 90%;
+    display: inline-block;
+    color: #ccc;
+    top: 50%;
+    transform: translatey(-50%);
+    left: 5%;
+    z-index: -1;
   }
- 
+
   /* Hide the default text onFocus */
-  &:focus::before{
-      color:transparent;
+  &:focus::before {
+    color: transparent;
   }
 }
 </style>
 
 <script>
 export default {
-data() {
-  return {
-    fileName: null,
-    imageData: null,
-    showSubmit:false,
-    showPaste:true,
-    showUpload:true,
-    showPasteText:false,
-  };
-},
-methods: {
-
-toggleSubmit() {
-  console.log(this.showSubmit)
-  this.showSubmit = !this.showSubmit;
-  
-},
-handleFileUpload(event) {
-    const file = event.target.files[0];
-    if (file) {
-      this.fileName = file.name;
-      const reader = new FileReader();
-      reader.onload = () => {
-        this.imageData = reader.result;
-      };
-      reader.readAsDataURL(file);
-      this.showPaste = !this.showPaste;
-    } else {
-      this.fileName = null;
-      this.imageData = null;
-      
-    }
-  },
-  handlePaste(event) {
-    let cbPayload = [...(event.clipboardData || event.originalEvent.clipboardData).items];
-    cbPayload = cbPayload.filter(item => /image/.test(item.type));
-
-    if (!cbPayload.length || cbPayload.length === 0) return false;
-
-    let reader = new FileReader();
-    reader.onload = (e) => {
-      this.$refs.imageUpload.innerHTML = `<img src="${e.target.result}">`;
-      
+  data() {
+    return {
+      fileName: null,
+      imageData: null,
+      showSubmit: false,
+      showPaste: true,
+      showUpload: true,
+      showPasteText: false,
     };
-    reader.readAsDataURL(cbPayload[0].getAsFile());
-    this.showUpload=!this.showUpload;
-    this.showPasteText=!this.showPasteText;
-  }
+  },
+  methods: {
+    toggleSubmit() {
+      console.log(this.showSubmit);
+      this.showSubmit = !this.showSubmit;
+    },
+    handleFileUpload(event) {
+      const file = event.target.files[0];
+      if (file) {
+        this.fileName = file.name;
+        const reader = new FileReader();
+        reader.onload = () => {
+          this.imageData = reader.result;
+        };
+        reader.readAsDataURL(file);
+        this.showPaste = !this.showPaste;
+      } else {
+        this.fileName = null;
+        this.imageData = null;
+      }
+    },
+    handlePaste(event) {
+      let cbPayload = [
+        ...(event.clipboardData || event.originalEvent.clipboardData).items,
+      ];
+      cbPayload = cbPayload.filter((item) => /image/.test(item.type));
 
-}
+      if (!cbPayload.length || cbPayload.length === 0) return false;
+
+      let reader = new FileReader();
+      reader.onload = (e) => {
+        this.$refs.imageUpload.innerHTML = `<img src="${e.target.result}">`;
+      };
+      reader.readAsDataURL(cbPayload[0].getAsFile());
+      this.showUpload = !this.showUpload;
+      this.showPasteText = !this.showPasteText;
+    },
+  },
 };
 </script>
