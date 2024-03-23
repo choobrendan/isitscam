@@ -1,18 +1,5 @@
 <template>
-  <!-- <div class="z-50 fixed top-0 w-full bg-white bg-opacity-85 h-[8vh] mb-2 px-4 flex items-center justify-between align-middle">
-    <div class="flex items-center">
-      <a href="/" class="mr-4">
-        <logo :fontSize="24" />
-      </a>
-      <a href="/home" class="mr-4">Scam Detection</a>
-      <a href="/report" class="mr-4">Discover</a>
-    </div>
-    <div class="flex items-center">
-      <a href="/login" class="mr-4">Login</a>
-      <a href="/register">Register</a>
-    </div>
-  </div> -->
-  <fwb-navbar>
+  <fwb-navbar class="custom-navbar">
     <template #logo>
       <a href="/">
         <logo :fontSize="24" />
@@ -29,7 +16,7 @@
       <fwb-navbar-collapse :is-show-menu="isShowMenu">
         <fwb-navbar-link link="report"> Log In </fwb-navbar-link>
       </fwb-navbar-collapse>
-      <fwb-button size="xs"> Sign Up </fwb-button>
+      <fwb-button class="my-auto h-10 items-center"> Sign Up </fwb-button>
     </template>
   </fwb-navbar>
 </template>
@@ -58,5 +45,12 @@ import {
 a {
   text-decoration: none;
   color: black;
+}
+.custom-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
+  /* Adjust this value to your preference */
 }
 </style>
