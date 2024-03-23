@@ -1,16 +1,4 @@
 <template>
-  <!-- Form dialog -->
-  <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center z-20" v-if="showForm">
-    <ScamForm class="absolute z-20" />
-    <div class="relative w-4/5 h-4/5">
-      <div class="absolute z-50 bottom-4 right-4">
-        <button type="button" @click="toggleComponent"
-          class="m-4 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-          Submit
-        </button>
-      </div>
-    </div>
-  </div>
   <div class="submit-data" v-if="showSubmit">
     <div class="flex flex-row">
       <div class="flex flex-row items-center justify-center">
@@ -97,11 +85,15 @@
           d="M8 4H4m0 0v4m0-4 5 5m7-5h4m0 0v4m0-4-5 5M8 20H4m0 0v-4m0 4 5-5m7 5h4m0 0v-4m0 4-5-5" />
       </svg>
     </router-link>
-    <h1 class="mx-12 mt-10">Discover Scams</h1>
-    
-      <scam-card v-for="(item, index) in scamData" :key="index" :count="item.count" :title="item.title"
-        :description="item.description" :image="item.image" :chips="item.chips" @update:count="count = $event"
-        @whatsappClicked="handleWhatsappClicked" />
+    <p class="mx-12 mt-10 font-lg">Discover Scams</p>
+    <!-- TODO: the cards are not showing up -->
+    <div class="grid grid-col lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 m-12 mt-4">
+      <div class="grid gap-4">
+        <scam-card v-for="(item, index) in scamData" :key="index" :count="item.count" :title="item.title"
+          :description="item.description" :image="item.image" :chips="item.chips" @update:count="count = $event"
+          @whatsappClicked="handleWhatsappClicked" />
+      </div>
+    </div>
     <div class="wrap">
       <div class="drag" ref="drag">
         <svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -114,18 +106,6 @@
           </g>
         </svg>
       </div>
-    </div>
-    <!-- Add button -->
-    <div class="button-add">
-      <button @click="toggleComponent" type="button"
-        class="fixed bottom-6 z-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-4 text-center items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-        <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9"
-            d="M5 12h14m-7 7V5" />
-        </svg>
-        <span class="sr-only">Icon description</span>
-      </button>
     </div>
   </div>
   <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center z-20"
