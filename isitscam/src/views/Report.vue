@@ -44,11 +44,22 @@
       </div>
     </form>
 
-    <!-- TODO: Vue masonry layout -->
     <div class="grid grid-col lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mt-4">
-      <scam-card v-for="(item, index) in scamData" :key="index" :count="item.count" :title="item.title"
-        :description="item.description" :image="item.image" :chips="item.chips" @update:count="count = $event"
-        @whatsappClicked="handleWhatsappClicked" />
+      <div class="grid gap-4">
+        <scam-card v-for="(item, index) in scamData.filter((_, i) => i % 3 === 0)" :key="index" :count="item.count"
+          :title="item.title" :description="item.description" :image="item.image" :chips="item.chips"
+          @update:count="count = $event" @whatsappClicked="handleWhatsappClicked" />
+      </div>
+      <div class="grid gap-4">
+        <scam-card v-for="(item, index) in scamData.filter((_, i) => i % 3 === 1)" :key="index" :count="item.count"
+          :title="item.title" :description="item.description" :image="item.image" :chips="item.chips"
+          @update:count="count = $event" @whatsappClicked="handleWhatsappClicked" />
+      </div>
+      <div class="grid gap-4">
+        <scam-card v-for="(item, index) in scamData.filter((_, i) => i % 3 === 2)" :key="index" :count="item.count"
+          :title="item.title" :description="item.description" :image="item.image" :chips="item.chips"
+          @update:count="count = $event" @whatsappClicked="handleWhatsappClicked" />
+      </div>
     </div>
 
     <!-- <fwb-tabs v-model="activeTab" variant="pills" class="p-2">
@@ -73,21 +84,39 @@
         </div>
       </fwb-tab>
     </fwb-tabs> -->
-    <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center z-20"
+    <fwb-button @click="toggleComponent" class="fixed right-6 bottom-6 z-2">
+      Add a post
+    </fwb-button>
+    <ScamForm />
+
+  </div>
+  <div class=" flex h-full w-full absolute top-0 left-0 justify-center items-center z-20"
       style="background-color: #eae6df" v-if="whatsappClicked">
       <WhatsAppGame />
-    </div>
   </div>
+  <ScamForm :showForm="showForm" :toggleComponent="toggleComponent" />
 </template>
-
 <script setup>
-import { ref } from "vue";
+import { ref} from 'vue';
+import { FwbButton } from 'flowbite-vue'
 import { FwbTab, FwbTabs } from "flowbite-vue";
 
 const activeTab = ref("first");
+
+
+const isShowModal = ref(false)
+
+function closeModal() {
+  isShowModal.value = false
+}
+function showModal() {
+  isShowModal.value = true
+}
+
 </script>
 
 <script>
+import ScamForm from "../components/ScamForm.vue"; 
 import scamData from "../provider/ScamReportData.json";
 import WhatsAppGame from "../components/WhatsAppGame.vue";
 export default {
@@ -109,6 +138,7 @@ export default {
       newTextDelay: 2800,
       displayTextArrayIndex: 0,
       charIndex: 0,
+      showForm: false,
     };
   },
   props: {},
@@ -117,6 +147,7 @@ export default {
   },
   components: {
     WhatsAppGame,
+    ScamForm,
   },
   methods: {
     handleWhatsappClick(value) {
@@ -157,6 +188,9 @@ export default {
           this.displayTextArrayIndex = 0;
         setTimeout(this.typeText, this.typingSpeed + 1000);
       }
+    },
+    toggleComponent() {
+      this.showForm = !this.showForm;
     },
   },
 };
