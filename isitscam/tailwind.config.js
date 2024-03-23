@@ -8,7 +8,11 @@ module.exports = {
     "node_modules/flowbite/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      zIndex: {
+        '100': '100',
+      }
+    },
   },
   plugins: [require("flowbite"), require("flowbite/plugin")],
 };
