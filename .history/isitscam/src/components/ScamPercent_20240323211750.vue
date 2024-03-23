@@ -2,13 +2,11 @@
 
   <div class="m-2">
       <div class="flex flex-row justify-between py-2">
-      <p class="flex text-gray-900 resize-none">{{scamType}}</p><div class="tooltip">More info
+      <p class="flex text-gray-900 resize-none">{{content}}</p><div class="tooltip">More info
     <span class="tooltiptext">Tooltip text</span>
   </div></div>
       <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
-        <div :style="{ width: percentage + '%' }" class="bg-blue-600 text-sm font-medium text-blue-100 text-center p-0.25 leading-none rounded-full">
-      {{ percentage }}%
-    </div>
+        <div class="bg-blue-600 text-sm font-medium text-blue-100 text-center p-0.25 leading-none rounded-full" style="width: 69%"> {{ percentage }}%</div>
       </div>
     </div>
   </template>
@@ -47,8 +45,7 @@
   <script>
 export default {
   props: {
-    scamType: String,
-    percentage:Number,
+    content: String
   }
 };
 </script>

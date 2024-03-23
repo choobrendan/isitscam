@@ -286,7 +286,6 @@ handleFileUpload(event) {
     this.showUpload=!this.showUpload;
     this.showPasteText=!this.showPasteText;
   }
-
 }
 };
 </script>

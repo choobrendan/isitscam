@@ -260,7 +260,7 @@ export default {
     };
   },
   components: {
-    ScamForm ,WhatsAppGame,ScamPercent// Register your component
+    ScamForm ,WhatsAppGame,ScamPercent,SubmitButton
   },
   mounted() {
     document.addEventListener('mousedown', this.startDrag);

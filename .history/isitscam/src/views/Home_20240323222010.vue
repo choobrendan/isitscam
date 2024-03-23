@@ -345,8 +345,8 @@ handleFileUpload(event) {
   generatePercentage() {
       // Generate random number between 0 and 100
       return Math.floor(Math.random() * 101);
-    },
-
+    }
+    
   }
 };
 

@@ -345,8 +345,13 @@ handleFileUpload(event) {
   generatePercentage() {
       // Generate random number between 0 and 100
       return Math.floor(Math.random() * 101);
-    },
-
+    }
+    created() {
+    // Check if the query parameter is present
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('fromButton')) {
+      this.isRedirectedFromButton = false;
+    }
   }
 };
 

@@ -251,12 +251,8 @@ export default {
 
       content1: 'Too Good to Be True:',
       content2: 'Urgency and Pressure:',
-      content3: 'Requesting Personal Info:',
-      content4: 'Unsolicited Communication:',
-      content5: 'Unusual Payment Methods:',
-      content6: 'Poor Grammar and Spelling:',
-      content7: 'Unverified Sources:',
-      content8: 'Suspicious Account:',
+      content3: 'Request for Personal Information:',
+      content4:
     };
   },
   components: {
@@ -273,8 +269,6 @@ export default {
     document.removeEventListener('mouseup', this.endDrag);
   },
   methods: {
-
-    
     startDrag(event) {
       if (event.target === this.$refs.drag || event.target.parentNode === this.$refs.drag) {
         this.isDragging = true;
@@ -345,8 +339,7 @@ handleFileUpload(event) {
   generatePercentage() {
       // Generate random number between 0 and 100
       return Math.floor(Math.random() * 101);
-    },
-
+    }
   }
 };
 

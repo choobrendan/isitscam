@@ -248,6 +248,9 @@ data() {
     showPasteText:false,
   };
 },
+components: {
+    ScamForm ,WhatsAppGame,ScamPercent// Register your component
+  },
 methods: {
 
 toggleSubmit() {

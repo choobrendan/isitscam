@@ -13,7 +13,7 @@ import ScamCard from './components/ScamCard.vue'
 import Logo from './components/Logo.vue'
 import WhatsAppGame from './components/WhatsAppGame.vue'
 import Navbar from './components/Navbar.vue'
-
+import Navbar from './components/Navbar.vue'
 
 const app = createApp(App)
 app.component('scam-card',ScamCard)

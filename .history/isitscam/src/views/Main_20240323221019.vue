@@ -237,6 +237,7 @@ border-style: dashed;
 </style>
 
 <script>
+import SubmitButton from '../components/SubmitButton.vue'
 export default {
 data() {
   return {
@@ -248,6 +249,9 @@ data() {
     showPasteText:false,
   };
 },
+components: {
+    SubmitButton// Register your component
+  },
 methods: {
 
 toggleSubmit() {

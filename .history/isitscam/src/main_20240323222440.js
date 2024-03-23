@@ -17,6 +17,7 @@ import Navbar from './components/Navbar.vue'
 
 const app = createApp(App)
 app.component('scam-card',ScamCard)
+
 app.component('whatsapp-game', WhatsAppGame)
 app.component('logo',Logo)
 app.component('navbar',Navbar)

@@ -248,6 +248,9 @@ data() {
     showPasteText:false,
   };
 },
+components: {
+    SubmitButton// Register your component
+  },
 methods: {
 
 toggleSubmit() {

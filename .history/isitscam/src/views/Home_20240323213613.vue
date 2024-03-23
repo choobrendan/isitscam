@@ -273,8 +273,6 @@ export default {
     document.removeEventListener('mouseup', this.endDrag);
   },
   methods: {
-
-    
     startDrag(event) {
       if (event.target === this.$refs.drag || event.target.parentNode === this.$refs.drag) {
         this.isDragging = true;
@@ -345,8 +343,7 @@ handleFileUpload(event) {
   generatePercentage() {
       // Generate random number between 0 and 100
       return Math.floor(Math.random() * 101);
-    },
-
+    }
   }
 };
 

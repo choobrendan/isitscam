@@ -286,7 +286,10 @@ handleFileUpload(event) {
     this.showUpload=!this.showUpload;
     this.showPasteText=!this.showPasteText;
   }
-
+  redirectToTargetPage() {
+      // Redirect to the target page with the query parameter
+      window.location.href = '/target-page?fromButton=true';
+    }
 }
 };
 </script>

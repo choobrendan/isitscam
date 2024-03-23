@@ -66,10 +66,10 @@
 <ScamPercent :scamType="content3" :percentage=generatePercentage()></ScamPercent>
 <ScamPercent :scamType="content4" :percentage=generatePercentage() ></ScamPercent>
   </div><div class="w-1/2">
-    <ScamPercent :scamType="content5" :percentage=generatePercentage()></ScamPercent>
-    <ScamPercent :scamType="content6" :percentage=generatePercentage()></ScamPercent>
-    <ScamPercent :scamType="content7" :percentage=generatePercentage()></ScamPercent>
-    <ScamPercent :scamType="content8" :percentage=generatePercentage()></ScamPercent>
+    <ScamPercent :scamType="content5"></ScamPercent>
+    <ScamPercent :scamType="content6"></ScamPercent>
+    <ScamPercent :scamType="content7"></ScamPercent>
+    <ScamPercent :scamType="content8"></ScamPercent>
 </div>
     </div>
     
@@ -249,14 +249,8 @@ export default {
       whatsappClicked:false,
 
 
-      content1: 'Too Good to Be True:',
-      content2: 'Urgency and Pressure:',
-      content3: 'Requesting Personal Info:',
-      content4: 'Unsolicited Communication:',
-      content5: 'Unusual Payment Methods:',
-      content6: 'Poor Grammar and Spelling:',
-      content7: 'Unverified Sources:',
-      content8: 'Suspicious Account:',
+      content1: 'Content for instance 1',
+      content2: 'Content for instance 2',
     };
   },
   components: {
@@ -273,8 +267,6 @@ export default {
     document.removeEventListener('mouseup', this.endDrag);
   },
   methods: {
-
-    
     startDrag(event) {
       if (event.target === this.$refs.drag || event.target.parentNode === this.$refs.drag) {
         this.isDragging = true;
@@ -341,12 +333,7 @@ handleFileUpload(event) {
     this.showUpload=!this.showUpload;
     this.showPasteText=!this.showPasteText;
     
-  },
-  generatePercentage() {
-      // Generate random number between 0 and 100
-      return Math.floor(Math.random() * 101);
-    },
-
+  }
   }
 };
 

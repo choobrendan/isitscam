@@ -61,7 +61,6 @@
     <p class="text-gray-900  text-lg" >Analytics</p>
     <div class="flex flex-row ">
       <div class="w-1/2">
-<ScamPercent :scamType="content1" :percentage=generatePercentage() ></ScamPercent>
 <ScamPercent :scamType="content2" :percentage=generatePercentage()></ScamPercent>
 <ScamPercent :scamType="content3" :percentage=generatePercentage()></ScamPercent>
 <ScamPercent :scamType="content4" :percentage=generatePercentage() ></ScamPercent>
@@ -232,6 +231,7 @@ border-style: dashed;
 import ScamForm from '../components/ScamForm.vue'
 import WhatsAppGame from '../components/WhatsAppGame.vue'
 import ScamPercent from '../components/ScamPercent.vue'
+
 export default {
   props: ['showSubmit'],
   data() {
@@ -260,7 +260,7 @@ export default {
     };
   },
   components: {
-    ScamForm ,WhatsAppGame,ScamPercent// Register your component
+    ScamForm ,WhatsAppGame,ScamPercent
   },
   mounted() {
     document.addEventListener('mousedown', this.startDrag);

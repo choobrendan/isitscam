@@ -253,7 +253,7 @@ methods: {
 toggleSubmit() {
   console.log(this.showSubmit)
   this.showSubmit = !this.showSubmit;
-  
+  window.location.href = '/home?fromButton=true';
 },
 handleFileUpload(event) {
     const file = event.target.files[0];

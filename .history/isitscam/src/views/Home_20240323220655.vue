@@ -232,6 +232,7 @@ border-style: dashed;
 import ScamForm from '../components/ScamForm.vue'
 import WhatsAppGame from '../components/WhatsAppGame.vue'
 import ScamPercent from '../components/ScamPercent.vue'
+import SubmitButton from '../components/SubmitButton.vue'
 export default {
   props: ['showSubmit'],
   data() {
@@ -259,8 +260,10 @@ export default {
       content8: 'Suspicious Account:',
     };
   },
-  components: {
+  components: {  components: {
     ScamForm ,WhatsAppGame,ScamPercent// Register your component
+  },
+    ScamForm ,WhatsAppGame,ScamPercent,SubmitButton
   },
   mounted() {
     document.addEventListener('mousedown', this.startDrag);
