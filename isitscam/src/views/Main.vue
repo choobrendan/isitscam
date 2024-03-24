@@ -172,16 +172,15 @@
 
 <style scoped>
 .title {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 84px;
   color: gray;
   font-weight: 300;
 }
 
 .bold-title {
-  color: black;
-  font-weight: bolder;
+  color: #9A0000;
+  font-weight: 700;
 }
 
 p {
