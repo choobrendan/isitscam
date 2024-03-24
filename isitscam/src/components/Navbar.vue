@@ -16,8 +16,8 @@
       <fwb-navbar-collapse :is-show-menu="isShowMenu">
         <fwb-navbar-link link="/login"> Log In </fwb-navbar-link>
       </fwb-navbar-collapse>
-      <fwb-button href="/register" class=" my-auto h-5 items-center">
-       <p class="text-white"> Sign Up</p>
+      <fwb-button href="/register" class="my-auto h-5 items-center">
+        <p class="text-white">Sign Up</p>
       </fwb-button>
     </template>
   </fwb-navbar>

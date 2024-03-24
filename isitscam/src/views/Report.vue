@@ -1,109 +1,109 @@
 <template>
-    <navbar class="fixed z-20"/>
-    <div class="flex align-middle justify-center top-0">
-  <div class="container p-16">
-    <!-- <router-link to="/home" class="border-none font-medium text-sm ml-0.5 mb-2 rounded">
+  <navbar class="fixed z-20" />
+  <div class="flex align-middle justify-center top-0">
+    <div class="container p-16">
+      <!-- <router-link to="/home" class="border-none font-medium text-sm ml-0.5 mb-2 rounded">
       << Back
     </router-link> -->
-    <h1>isitScam Discovery</h1>
-    <p>
-      Be informed. Share your experience. Help others avoid scams like
-      <span class="typed-text">{{ typeValue }}</span>
-      <span class="blinking-cursor">|</span>
-      <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
-    </p>
+      <h1>isitScam Discovery</h1>
+      <p>
+        Be informed. Share your experience. Help others avoid scams like
+        <span class="typed-text">{{ typeValue }}</span>
+        <span class="blinking-cursor">|</span>
+        <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+      </p>
 
-    <!-- Search Bar -->
-    <form class="w-full mx-auto my-4">
-      <div class="flex gap-2">
-        <div class="relative ml-2">
-          <button
-            class="block px-8 py-2.5 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            <span>Filter</span>
-          </button>
-        </div>
-        <div class="relative w-full">
-          <input
-            type="search"
-            id="search-dropdown"
-            class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
-            placeholder="Search for scams by keyword, phone numbers, and more ..."
-            required
-          />
-          <button
-            type="submit"
-            class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            <svg
-              class="w-4 h-4"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
+      <!-- Search Bar -->
+      <form class="w-full mx-auto my-4">
+        <div class="flex gap-2">
+          <div class="relative ml-2">
+            <button
+              class="block px-8 py-2.5 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-              />
-            </svg>
-            <span class="sr-only">Search</span>
-          </button>
+              <span>Filter</span>
+            </button>
+          </div>
+          <div class="relative w-full">
+            <input
+              type="search"
+              id="search-dropdown"
+              class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+              placeholder="Search for scams by keyword, phone numbers, and more ..."
+              required
+            />
+            <button
+              type="submit"
+              class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+              <span class="sr-only">Search</span>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <div
+        class="grid grid-col lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mt-4"
+      >
+        <div class="grid gap-4">
+          <scam-card
+            v-for="(item, index) in scamData.filter((_, i) => i % 3 === 0)"
+            :key="index"
+            :count="item.count"
+            :title="item.title"
+            :description="item.description"
+            :image="item.image"
+            :chips="item.chips"
+            @update:count="count = $event"
+            @whatsappClicked="handleWhatsappClick"
+            @emailClicked="handleEmailClick"
+          />
+        </div>
+        <div class="grid gap-4">
+          <scam-card
+            v-for="(item, index) in scamData.filter((_, i) => i % 3 === 1)"
+            :key="index"
+            :count="item.count"
+            :title="item.title"
+            :description="item.description"
+            :image="item.image"
+            :chips="item.chips"
+            @update:count="count = $event"
+            @whatsappClicked="handleWhatsappClick"
+            @emailClicked="handleEmailClick"
+          />
+        </div>
+        <div class="grid gap-4">
+          <scam-card
+            v-for="(item, index) in scamData.filter((_, i) => i % 3 === 2)"
+            :key="index"
+            :count="item.count"
+            :title="item.title"
+            :description="item.description"
+            :image="item.image"
+            :chips="item.chips"
+            @update:count="count = $event"
+            @whatsappClicked="handleWhatsappClick"
+            @emailClicked="handleEmailClick"
+          />
         </div>
       </div>
-    </form>
 
-    <div
-      class="grid grid-col lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mt-4"
-    >
-      <div class="grid gap-4">
-        <scam-card
-          v-for="(item, index) in scamData.filter((_, i) => i % 3 === 0)"
-          :key="index"
-          :count="item.count"
-          :title="item.title"
-          :description="item.description"
-          :image="item.image"
-          :chips="item.chips"
-          @update:count="count = $event"
-          @whatsappClicked="handleWhatsappClick"
-          @emailClicked="handleEmailClick"
-        />
-      </div>
-      <div class="grid gap-4">
-        <scam-card
-          v-for="(item, index) in scamData.filter((_, i) => i % 3 === 1)"
-          :key="index"
-          :count="item.count"
-          :title="item.title"
-          :description="item.description"
-          :image="item.image"
-          :chips="item.chips"
-          @update:count="count = $event"
-          @whatsappClicked="handleWhatsappClick"
-          @emailClicked="handleEmailClick"
-        />
-      </div>
-      <div class="grid gap-4">
-        <scam-card
-          v-for="(item, index) in scamData.filter((_, i) => i % 3 === 2)"
-          :key="index"
-          :count="item.count"
-          :title="item.title"
-          :description="item.description"
-          :image="item.image"
-          :chips="item.chips"
-          @update:count="count = $event"
-          @whatsappClicked="handleWhatsappClick"
-          @emailClicked="handleEmailClick"
-        />
-      </div>
-    </div>
-
-    <!-- <fwb-tabs v-model="activeTab" variant="pills" class="p-2">
+      <!-- <fwb-tabs v-model="activeTab" variant="pills" class="p-2">
       <fwb-tab name="all" title="All">
         <div class="grid grid-col lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mt-4">
           <scam-card v-for="i in 7" :key="i" />
@@ -125,11 +125,11 @@
         </div>
       </fwb-tab>
     </fwb-tabs> -->
-    <fwb-button @click="toggleComponent" class="fixed right-6 bottom-6 z-2">
-      Add a post
-    </fwb-button>
-    <ScamForm />
-  </div>
+      <fwb-button @click="toggleComponent" class="fixed right-6 bottom-6 z-2">
+        Add a post
+      </fwb-button>
+      <ScamForm />
+    </div>
   </div>
   <div
     class="flex h-full w-full top-0 left-0 absolute justify-center align-middle"
