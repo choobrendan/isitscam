@@ -53,9 +53,33 @@
             @update:count="count = $event" @whatsappClicked="handleWhatsappClick" @emailClicked="handleEmailClick" />
         </div>
       </div>
+
+      <!-- <fwb-tabs v-model="activeTab" variant="pills" class="p-2">
+      <fwb-tab name="all" title="All">
+        <div class="grid grid-col lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mt-4">
+          <scam-card v-for="i in 7" :key="i" />
+        </div>
+      </fwb-tab>
+      <fwb-tab name="second" title="Second">
+        <div class="min-h-screen">
+          Lorem ipsum second...
+        </div>
+      </fwb-tab>
+      <fwb-tab name="third" title="Third">
+        <div class="min-h-screen">
+          Lorem ipsum second...
+        </div>
+      </fwb-tab>
+      <fwb-tab name="fourth" title="Fourth">
+        <div class="min-h-screen">
+          Lorem ipsum second...
+        </div>
+      </fwb-tab>
+    </fwb-tabs> -->
       <fwb-button @click="toggleComponent" class="fixed right-6 bottom-6 z-2 bg-[#102E4A]">
         Add a post
       </fwb-button>
+      <ScamForm />
     </div>
   </div>
   <div class="flex h-full w-full top-0 left-0 absolute justify-center align-middle z-100" v-if="whatsappClicked">
@@ -74,10 +98,21 @@
   </div>
   <ScamForm :showForm="showForm" :toggleComponent="toggleComponent" />
 </template>
-
 <script setup>
 import { ref } from "vue";
 import { FwbButton } from "flowbite-vue";
+import { FwbTab, FwbTabs } from "flowbite-vue";
+
+const activeTab = ref("first");
+
+const isShowModal = ref(false);
+
+function closeModal() {
+  isShowModal.value = false;
+}
+function showModal() {
+  isShowModal.value = true;
+}
 </script>
 
 <script>
@@ -255,5 +290,24 @@ p {
   50% {
     color: #002b56;
   }
+}
+
+/* TODO */
+/* Initially hide the dropdown */
+#dropdown {
+  display: none;
+}
+
+/* Position the dropdown button relative to its normal position */
+#dropdown-button {
+  position: relative;
+}
+
+/* Show the dropdown when the button is hovered over */
+#dropdown-button:hover + #dropdown {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 </style>

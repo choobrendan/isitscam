@@ -20,8 +20,8 @@
               </div>
               <div class="flex items-center justify-end">
                 <div class="talk-bubble right tri-right round btm-right">
-                  <div class="talktex ">
-                    <p class="relative z-10">This is sus... 🤔</p>
+                  <div class="talktex z-10">
+                    <p>This is sus... 🤔</p>
                   </div>
                 </div>
               </div>
@@ -37,9 +37,7 @@
                   class="group ml-2 mr-7 px-3 py-2.5 w-11/12 text-left text-gray-600 hover:text-white border-1 border-gray-800 hover:bg-[#102E4A] focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">
                   <div class="flex flex-row justify-between text-middle">
                     <div class="flex items-center pl-1">
-                      <span class="typed-text">{{ typeValue }}</span>
-                      <span class="blinking-cursor">|</span>
-                      <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+                      Hey isitscam, is it a SCAM ??!?!?
                     </div>
                     <div>
                       <svg class="w-6 h-6 pb-1 text-gray-800 group-hover:text-white dark:text-white rotate-45"
@@ -234,86 +232,6 @@ fwb-file-input {
   &:focus::before {
     color: transparent;
   }
-
-    p {
-      font-size: 1rem;
-      font-weight: normal;
-  
-      span.typed-text {
-        color: #530000;
-        font-weight: bold;
-      }
-    }
-  
-    .blinking-cursor {
-      font-size: 1rem;
-      color: #002b56;
-      -webkit-animation: 1s blink step-end infinite;
-      -moz-animation: 1s blink step-end infinite;
-      -ms-animation: 1s blink step-end infinite;
-      -o-animation: 1s blink step-end infinite;
-      animation: 1s blink step-end infinite;
-    }
-  
-    @keyframes blink {
-  
-      from,
-      to {
-        color: transparent;
-      }
-  
-      50% {
-        color: #002b56;
-      }
-    }
-  
-    @-moz-keyframes blink {
-  
-      from,
-      to {
-        color: transparent;
-      }
-  
-      50% {
-        color: #002b56;
-      }
-    }
-  
-    @-webkit-keyframes blink {
-  
-      from,
-      to {
-        color: transparent;
-      }
-  
-      50% {
-        color: #002b56;
-      }
-    }
-  
-    @-ms-keyframes blink {
-  
-      from,
-      to {
-        color: transparent;
-      }
-  
-      50% {
-        color: #002b56;
-      }
-    }
-  
-    @-o-keyframes blink {
-  
-      from,
-      to {
-        color: transparent;
-      }
-  
-      50% {
-        color: #002b56;
-      }
-    }
 }
 </style>
 
@@ -321,18 +239,6 @@ fwb-file-input {
 export default {
   data() {
     return {
-      typeValue: "",
-      typeStatus: false,
-      displayTextArray: [
-        "Hey isitscam, is it a SCAM?? !? !? ",
-        "This definitely looks like scam...",
-        "or is it? 🤔",
-      ],
-      typingSpeed: 100,
-      erasingSpeed: 40,
-      newTextDelay: 2800,
-      displayTextArrayIndex: 0,
-      charIndex: 0,
       fileName: null,
       imageData: null,
       showSubmit: false,
@@ -341,43 +247,7 @@ export default {
       showPasteText: false,
     };
   },
-  props: {},
-  created() {
-    setTimeout(this.typeText, this.newTextDelay + 200);
-  },
   methods: {
-    typeText() {
-      if (
-        this.charIndex <
-        this.displayTextArray[this.displayTextArrayIndex].length
-      ) {
-        if (!this.typeStatus) this.typeStatus = true;
-        this.typeValue += this.displayTextArray[
-          this.displayTextArrayIndex
-        ].charAt(this.charIndex);
-        this.charIndex += 1;
-        setTimeout(this.typeText, this.typingSpeed);
-      } else {
-        this.typeStatus = false;
-        setTimeout(this.eraseText, this.newTextDelay);
-      }
-    },
-    eraseText() {
-      if (this.charIndex > 0) {
-        if (!this.typeStatus) this.typeStatus = true;
-        this.typeValue = this.displayTextArray[
-          this.displayTextArrayIndex
-        ].substring(0, this.charIndex - 1);
-        this.charIndex -= 1;
-        setTimeout(this.eraseText, this.erasingSpeed);
-      } else {
-        this.typeStatus = false;
-        this.displayTextArrayIndex += 1;
-        if (this.displayTextArrayIndex >= this.displayTextArray.length)
-          this.displayTextArrayIndex = 0;
-        setTimeout(this.typeText, this.typingSpeed + 1000);
-      }
-    },
     toggleSubmit() {
       console.log(this.showSubmit);
       this.showSubmit = !this.showSubmit;

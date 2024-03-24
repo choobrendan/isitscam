@@ -142,7 +142,7 @@
     </div>
     <div class="flex h-full w-full top-0 left-0 absolute justify-center align-middle" v-if="whatsappClicked">
       <div
-        class="flex flex-row h-[90%]  justify-center align-middle items-center translate-y-[6%] z-20 rounded-3xl"
+        class="flex flex-row h-[90%] w-[840px] justify-center align-middle items-center translate-y-[6%] z-20 rounded-3xl"
         style="background-color: #eae6df" v-if="whatsappClicked">
         <whatsapp-game @whatsappClicked="handleWhatsappClick" />
       </div>

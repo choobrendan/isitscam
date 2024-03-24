@@ -1,6 +1,6 @@
 <template>
   <navbar />
-  <div class="relative w-[868px] h-[468px] bg-white rounded-3xl shadow-xl">
+  <div class="w-[868px] h-[468px] bg-white rounded-3xl shadow-xl">
     <div class="w-1/2 h-full">
       <div
         class="flex flex-col items-center justify-center px-6 mx-auto h-full"
@@ -70,7 +70,7 @@
               <a href="/home"
                 ><button
                   type="submit"
-                  class="w-full text-black outline-1 outline-slate-800 "
+                  class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                 >
                   Sign in
                 </button></a
@@ -87,9 +87,7 @@
           </div>
         </div>
       </div>
-      
     </div>
-    <img class="absolute w-96 h-96 right-0 top-0 m-10"src="../assets/OBJECTS.png">
+    <img src="../">
   </div>
- 
 </template>
