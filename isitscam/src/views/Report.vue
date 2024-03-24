@@ -76,7 +76,7 @@
         </div>
       </fwb-tab>
     </fwb-tabs> -->
-      <fwb-button @click="toggleComponent" class="fixed right-6 bottom-6 z-2">
+      <fwb-button @click="toggleComponent" class="fixed right-6 bottom-6 z-2 bg-[#102E4A]">
         Add a post
       </fwb-button>
       <ScamForm />
