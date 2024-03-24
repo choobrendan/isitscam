@@ -1,33 +1,58 @@
 <template>
-  <div class="fixed top-0 w-full bg-white h-[8vh] mb-2 px-4 flex items-center justify-between align-middle">
-    <div class="flex items-center">
-      <a href="/" class="mr-4">
+  <fwb-navbar class="custom-navbar">
+    <template #logo>
+      <a href="/">
         <logo :fontSize="24" />
       </a>
-      <!-- Add more links here -->
-      <a href="/home" class="mr-4">Scam Detection</a>
-      <a href="/report" class="mr-4">Discover</a>
-    </div>
-    <div class="flex items-center">
-      <a href="/login" class="mr-4">Login</a>
-      <a href="/register">Register</a>
-    </div>
-  </div>
+    </template>
+    <template #default="{ isShowMenu }">
+      <fwb-navbar-collapse :is-show-menu="isShowMenu">
+        <fwb-navbar-link link="/report"> What is Scam? </fwb-navbar-link>
+        <fwb-navbar-link link="/home"> Scam Detection </fwb-navbar-link>
+        <fwb-navbar-link link="/report"> Discover </fwb-navbar-link>
+      </fwb-navbar-collapse>
+    </template>
+    <template #right-side>
+      <fwb-navbar-collapse :is-show-menu="isShowMenu">
+        <fwb-navbar-link link="/login"> Log In </fwb-navbar-link>
+      </fwb-navbar-collapse>
+      <fwb-button href="/register" class="text-white my-auto h-10 items-center">
+        Sign Up
+      </fwb-button>
+    </template>
+  </fwb-navbar>
 </template>
 
 <script>
-import Logo from './Logo.vue';
+import Logo from "./Logo.vue";
 
 export default {
   components: {
-    Logo
-  }
-}
+    Logo,
+  },
+};
+</script>
+
+<script setup>
+import {
+  FwbButton,
+  FwbNavbar,
+  FwbNavbarCollapse,
+  FwbNavbarLink,
+  FwbNavbarLogo,
+} from "flowbite-vue";
 </script>
 
 <style scoped>
 a {
   text-decoration: none;
   color: black;
+}
+.custom-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
+  /* Adjust this value to your preference */
 }
 </style>
