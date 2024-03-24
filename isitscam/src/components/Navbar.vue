@@ -54,7 +54,7 @@ a {
   padding-right: 0;
   flex-direction: row;
   align-items: center;
-  height: 60px;
+  height: 35px;
   /* Adjust this value to your preference */
 }
 </style>

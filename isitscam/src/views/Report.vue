@@ -1,7 +1,7 @@
 <template>
     <navbar class="fixed z-20"/>
     <div class="flex align-middle justify-center top-0">
-  <div class="container mt-8 p-16">
+  <div class="container p-16">
     <!-- <router-link to="/home" class="border-none font-medium text-sm ml-0.5 mb-2 rounded">
       << Back
     </router-link> -->
