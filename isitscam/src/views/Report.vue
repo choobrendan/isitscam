@@ -1,4 +1,5 @@
 <template>
+    <navbar />
   <div class="container mt-8">
     <!-- <router-link to="/home" class="border-none font-medium text-sm ml-0.5 mb-2 rounded">
       << Back

@@ -1,5 +1,5 @@
 <template>
-
+  <navbar />
     <div class="w-[868px] h-[468px] bg-white rounded-3xl shadow-xl ">
 <div class="w-1/2 h-full ">
   <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-full  ">

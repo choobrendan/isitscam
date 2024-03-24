@@ -1,4 +1,5 @@
 <template>
+      <navbar />
     <div class="rounded-2xl w-[1068px] shadow-xl flex flex-row " >
       <div class="w-[700px] bg-white  shadow dark:border md:mt-0  dark:bg-gray-800 dark:border-gray-700 rounded-l-2xl">
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">

@@ -2,6 +2,7 @@
 <!-- <a href="/">
 <logo />
 </a> -->
+<navbar />
 <div>
     <div class="flex flex-row gap-6">
       <div class="">
