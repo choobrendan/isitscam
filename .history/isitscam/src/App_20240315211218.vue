@@ -1,0 +1,16 @@
+<template>
+  <div>
+    <fwb-textarea
+      v-model="message"
+      label="Your message"
+      placeholder="Write your message..."
+      disabled
+    />
+    <fwb-textarea
+      v-model="message"
+      label="Your message"
+      placeholder="Write your message..."
+      readonly
+    />
+  </div>
+</template>
