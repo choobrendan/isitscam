@@ -20,8 +20,8 @@
               </div>
               <div class="flex items-center justify-end">
                 <div class="talk-bubble right tri-right round btm-right">
-                  <div class="talktex ">
-                    <p class="relative z-10">This is sus... 🤔</p>
+                  <div class="talktex">
+                    <p>This is sus... 🤔</p>
                   </div>
                 </div>
               </div>

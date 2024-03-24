@@ -285,7 +285,7 @@
       v-if="whatsappClicked"
     >
       <div
-        class="flex flex-row h-[90%]  justify-center align-middle items-center translate-y-[6%] z-20 rounded-3xl"
+        class="flex flex-row h-[90%] w[840px]- justify-center align-middle items-center translate-y-[6%] z-20 rounded-3xl"
         style="background-color: #eae6df"
         v-if="whatsappClicked"
       >

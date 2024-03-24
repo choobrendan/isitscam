@@ -82,7 +82,7 @@
           <a class="py-2.5" href="/home"
             ><button
               type="submit"
-              class="w-full text-black bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
             >
               Create an account
             </button></a
@@ -102,9 +102,11 @@
       class="w-full bg-white text-left shadow dark:border md:mt-0 dark:bg-gray-100 dark:border-gray-100 rounded-r-2xl"
     >
       <div class="flex flex-col bg-[#EBF9FE]  h-full align-middle justify-center">
-          <h1 class=" title mx-8 mb-4 font-bold text-black">
-      isit<span class="font-bold text-[#FF5D5D]">scam</span>
-    </h1>
+        <h1 class="title mx-8 mb-4">
+
+        <logo :fontSize="24" />
+      
+        </h1>
         <p class="font-bold mx-8 my-4 text-4xl text-black">
           How you can use us to prevent falling victim to scammers
         </p>
