@@ -181,107 +181,49 @@
   </div>
 
   <div class="">
-    <img class="arrow h-16 absolute right-10" src="../assets/arrow.png" />
-    <div class="arrow-text right-28 text-gray-900">
+    <img class=" open-herearrow h-16 absolute right-10" src="../assets/arrow.png" />
+    <div class="open-herearrow-text right-28 text-gray-900">
       <p class="">Open here for</p>
       <p>more stuff!</p>
     </div>
   </div>
   <div class="drawer right" ref="drawer">
-    <router-link
-      to="/report"
-      class="border-none absolute top-0 left-3 py-4 px-4 rounded"
-    >
-      <svg
-        class="w-6 h-6 text-gray-800 dark:text-white"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        fill="none"
-        viewBox="0 0 24 24"
-      >
-        <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M8 4H4m0 0v4m0-4 5 5m7-5h4m0 0v4m0-4-5 5M8 20H4m0 0v-4m0 4 5-5m7 5h4m0 0v-4m0 4-5-5"
-        />
+      <router-link to="/report" class="border-none absolute top-0 left-3 py-4 px-4 rounded">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4H4m0 0v4m0-4 5 5m7-5h4m0 0v4m0-4-5 5M8 20H4m0 0v-4m0 4 5-5m7 5h4m0 0v-4m0 4-5-5"/>
+        </svg>
+      </router-link>
+      <h1 class="mx-12 mt-10">Discover Scams</h1>
+      <!-- Data populate -->
+      <!-- lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 -->
+      <div class="grid grid-col justify-center align-middle m-12 gap-8">
+        <scam-card v-for="i in 7" :key="i" @whatsappClicked="handleWhatsappClick"/>
+      </div>  
+      <div class="wrap">
+          <div class="drag" ref="drag">
+            <svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" transform="rotate(90)" stroke="#000000" stroke-width="0.034">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier"> 
+                <path d="M17 6v1h-17v-1h17zM0 10h17v-1h-17v1z" fill="#000000"></path> 
+              </g>
+            </svg>
+          </div>
+        </div>
+        <!-- Add button -->
+  <div class="button-add">
+    <button @click="toggleComponent" type="button" class=" fixed bottom-6 z-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-4 text-center  items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      <svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.9" d="M5 12h14m-7 7V5"/>
       </svg>
-    </router-link>
-    <h1 class="mx-12 mt-10">Discover Scams</h1>
-    <!-- Data populate -->
-    <!-- lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 -->
-    <div class="grid grid-col justify-center align-middle m-12 gap-8">
-      <scam-card
-        v-for="i in 7"
-        :key="i"
-        @whatsappClicked="handleWhatsappClick"
-      />
-    </div>
-    <div class="wrap">
-      <div class="drag" ref="drag">
-        <svg
-          viewBox="0 0 17 17"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          fill="#000000"
-          transform="rotate(90)"
-          stroke="#000000"
-          stroke-width="0.034"
-        >
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g
-            id="SVGRepo_tracerCarrier"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></g>
-          <g id="SVGRepo_iconCarrier">
-            <path
-              d="M17 6v1h-17v-1h17zM0 10h17v-1h-17v1z"
-              fill="#000000"
-            ></path>
-          </g>
-        </svg>
-      </div>
-    </div>
-    <!-- Add button -->
-    <div class="button-add">
-      <button
-        @click="toggleComponent"
-        type="button"
-        class="fixed bottom-6 z-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-4 text-center items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      >
-        <svg
-          class="w-[48px] h-[48px] text-gray-800 dark:text-white"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="0.9"
-            d="M5 12h14m-7 7V5"
-          />
-        </svg>
-        <span class="sr-only">Icon description</span>
-      </button>
-    </div>
+      <span class="sr-only">Icon description</span>
+    </button>
   </div>
-  <div
-    class="flex h-full w-full absolute top-0 left-0 justify-center items-center z-20"
-    style="background-color: #eae6df"
-    v-if="whatsappClicked"
-  >
-    <whatsapp-game @whatsappClicked="handleWhatsappClick" />
-  </div>
+    </div>
+    <div class="flex h-full w-full absolute top-0 left-0 justify-center items-center  z-20"  style="background-color: #eae6df;" v-if="whatsappClicked">
+
+    <whatsapp-game @whatsappClicked="handleWhatsappClick"/>
+ </div>
 </template>
 
 <style>
@@ -378,12 +320,17 @@ body {
   &:focus::before {
     color: transparent;
   }
+ .open-here{
+  user-select: none;
+
+ }
 }
 </style>
 
 <script>
 import ScamForm from "../components/ScamForm.vue";
 import WhatsAppGame from "../components/WhatsAppGame.vue";
+import EmailGame from '../components/EmailGame.vue';
 import ScamPercent from "../components/ScamPercent.vue";
 export default {
   props: ["showSubmit"],
@@ -395,11 +342,12 @@ export default {
       imageData: null,
       startWidth: 0,
       showForm: false,
-      showSubmit: true,
-      showPasteText: false,
-      showPaste: true,
-      showUpload: true,
-      whatsappClicked: false,
+      showSubmit:true,
+      showPasteText:false,
+    showPaste:true,
+    showUpload:true,
+      whatsappClicked:false,
+
 
       content1: "Too Good to Be True:",
       content2: "Urgency and Pressure:",
@@ -412,9 +360,7 @@ export default {
     };
   },
   components: {
-    ScamForm,
-    WhatsAppGame,
-    ScamPercent, // Register your component
+    ScamForm ,WhatsAppGame,ScamPercent,EmailGame// Register your component
   },
   mounted() {
     document.addEventListener("mousedown", this.startDrag);
@@ -456,9 +402,9 @@ export default {
     },
     handleWhatsappClick(value) {
       // Receive the value emitted from the ScamCard component
-      console.log(this.whatsappClicked);
+      console.log(this.whatsappClicked)
       this.whatsappClicked = value;
-      console.log(this.whatsappClicked);
+      console.log(this.whatsappClicked)
       // Now you can use whatsappClicked variable in this component
     },
     handleFileUpload(event) {

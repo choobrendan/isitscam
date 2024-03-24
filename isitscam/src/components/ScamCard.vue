@@ -160,8 +160,12 @@ export default {
         console.log("Clicked on Whatsapp chip");
         this.$emit("whatsappClicked", true);
       }
-    },
-  },
+      if (chip.text === "Scam") {
+        console.log("Clicked on Scam chip");
+        this.$emit('emailClicked', true);
+      }
+    }
+  }
 };
 </script>
 
