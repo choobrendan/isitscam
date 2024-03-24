@@ -110,7 +110,7 @@
             id="message"
             rows="4"
             class="resize-none block p-2.5 w-80 h-96 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Write your thoughts here..."
+            placeholder="Paste your text here..."
           ></textarea>
         </div>
       </div>
@@ -128,45 +128,53 @@
     </div>
   </div>
   <div class="h-full analysis text-left" v-if="!showSubmit">
-    <p class="text-gray-900 text-lg">Result</p>
+    <p class="text-gray-900  text-xl px-2">Result</p>
     <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700"></div>
-    <p class="text-gray-900">Sounds like the stealing boyfriend scam</p>
-    <p class="text-gray-900 text-lg">Analytics</p>
+    <p class="text-orange-600 px-2 font-semibold text-2xl py-4">Likely to be a scam!</p>
+    <p class="text-gray-900 text-xl px-2">Analytics</p>
     <div class="flex flex-row">
       <div class="w-1/2">
         <ScamPercent
           :scamType="content1"
           :percentage="generatePercentage()"
+          :tooltipText="tooltip1"
         ></ScamPercent>
         <ScamPercent
           :scamType="content2"
           :percentage="generatePercentage()"
+          :tooltipText="tooltip2"
         ></ScamPercent>
         <ScamPercent
           :scamType="content3"
           :percentage="generatePercentage()"
+          :tooltipText="tooltip3"
         ></ScamPercent>
         <ScamPercent
           :scamType="content4"
           :percentage="generatePercentage()"
+          :tooltipText="tooltip4"
         ></ScamPercent>
       </div>
       <div class="w-1/2">
         <ScamPercent
           :scamType="content5"
           :percentage="generatePercentage()"
+          :tooltipText="tooltip5"
         ></ScamPercent>
         <ScamPercent
           :scamType="content6"
           :percentage="generatePercentage()"
+          :tooltipText="tooltip6"
         ></ScamPercent>
         <ScamPercent
           :scamType="content7"
           :percentage="generatePercentage()"
+          :tooltipText="tooltip7"
         ></ScamPercent>
         <ScamPercent
           :scamType="content8"
           :percentage="generatePercentage()"
+          :tooltipText="tooltip8"
         ></ScamPercent>
       </div>
     </div>
@@ -176,7 +184,7 @@
         type="button"
         class="m-4 w-4/6 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
       >
-        Submit
+        Go Back
       </button>
     </div>
   </div>
@@ -416,6 +424,14 @@ export default {
       content6: "Poor Grammar and Spelling:",
       content7: "Unverified Sources:",
       content8: "Suspicious Account:",
+      tooltip1: "Detecting exaggerated claims or unrealistic promises in text or speech data.",
+      tooltip2: "Identifying language cues indicating urgency or pressure to act quickly.",
+      tooltip3:"Recognizing requests for sensitive personal information.",
+      tooltip4:"Detecting unsolicited communication and identifying its source.",
+      tooltip5:"Identifying unconventional payment methods.",
+      tooltip6:"Pattern recognition to flag payment methods such as wire transfers, cryptocurrency transactions, or requests for gift cards, which are commonly associated with scams.",
+      tooltip7:"Language modeling and grammar analysis to detect spelling mistakes, grammatical errors, and awkward phrasing that are characteristic of scam communications.",
+      tooltip8:"Suspicious social media accounts that might be disingenuine or fake.",
     };
   },
   components: {

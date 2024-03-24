@@ -4,7 +4,7 @@
       <p class="flex text-gray-900 resize-none">{{ scamType }}</p>
       <div class="tooltip">
         More info
-        <span class="tooltiptext">Tooltip text</span>
+        <span class="tooltiptext">{{ tooltipText }}</span>
       </div>
     </div>
     <div class="w-80 bg-gray-200 rounded-full dark:bg-gray-700">
@@ -30,8 +30,8 @@
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
-  background-color: black;
+  width: 360px;
+  background-color: rgba(0, 0, 0, 0.75);
   color: #fff;
   text-align: center;
   padding: 5px 0;
@@ -52,6 +52,7 @@ export default {
   props: {
     scamType: String,
     percentage: Number,
+    tooltipText:String,
   },
 };
 </script>
