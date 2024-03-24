@@ -162,10 +162,10 @@ export default {
       }
       if (chip.text === "Email") {
         console.log("Clicked on Email chip");
-        this.$emit('emailClicked', true);
+        this.$emit("emailClicked", true);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
