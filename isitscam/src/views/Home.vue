@@ -60,8 +60,6 @@
             placeholder="Paste your text here..."></textarea>
         </div>
       </div>
-
-      <!-- Drawer -->
     </div>
 
     <div @click="toggleSubmit">
@@ -108,18 +106,18 @@
   </div>
   <div class="drawer right" ref="drawer">
     <router-link to="/report" class="border-none absolute top-0 left-0 rounded">
-      <svg class="w-6 h-6 py-6 pl-12 pr-6 text-gray-800 bg-[#e3f6ff] dark:text-white" aria-hidden="true"
+      <svg class="w-6 h-6 py-5 pl-12 pr-6 text-gray-800 bg-[#e3f6ff] dark:text-white" aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M8 4H4m0 0v4m0-4 5 5m7-5h4m0 0v4m0-4-5 5M8 20H4m0 0v-4m0 4 5-5m7 5h4m0 0v-4m0 4-5-5" />
       </svg>
     </router-link>
     <h1 class=" mt-6 text-lg font-semibold">Discover Scams</h1>
-    <div class="grid grid-col lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mt-4">
+    <div class="grid grid-col gap-4 mt-4 ml-14 mr-9">
       <div class="grid gap-4">
-        <scam-card v-for="(item, index) in scamData" :key="index" :count="item.count" :title="item.title"
-          :description="item.description" :image="item.image" :chips="item.chips" @update:count="count = $event"
-          @whatsappClicked="handleWhatsappClick" @emailClicked="handleEmailClick" />
+        <scam-card v-for="(item, index) in scamData" :key="index" :count="item.count"
+          :title="item.title" :description="item.description" :image="item.image" :chips="item.chips"
+          @update:count="count = $event" @whatsappClicked="handleWhatsappClick" @emailClicked="handleEmailClick" />
       </div>
     </div>
     <div class="wrap">
@@ -138,7 +136,7 @@
   </div>
   <div class="flex h-full w-full top-0 left-0 absolute justify-center align-middle" v-if="whatsappClicked">
     <div
-      class="flex flex-row h-[90%]  justify-center align-middle items-center translate-y-[6%] flex-wrap z-20 rounded-3xl"
+      class="flex flex-row h-[90%]  justify-center align-middle items-center translate-y-[6%] z-20 rounded-3xl"
       style="background-color: #eae6df" v-if="whatsappClicked">
       <whatsapp-game @whatsappClicked="handleWhatsappClick" />
     </div>
@@ -260,6 +258,7 @@ body {
 </style>
 
 <script>
+import scamData from "../provider/ScamReportData.json";
 import ScamForm from "../components/ScamForm.vue";
 import WhatsAppGame from "../components/WhatsAppGame.vue";
 import EmailGame from "../components/EmailGame.vue";
@@ -391,4 +390,9 @@ export default {
     },
   },
 };
+</script>
+
+<script setup>
+import { ref } from "vue";
+
 </script>
