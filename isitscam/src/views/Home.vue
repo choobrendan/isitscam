@@ -22,7 +22,7 @@
     <div class="flex flex-row">
       <div class="flex flex-row items-center justify-center">
         <!-- Click to Upload -->
-        <div class=" flex flex-col h-96 min-w-80w-80">
+        <div class="flex flex-col h-96 min-w-80w-80">
           <div
             v-if="showUpload"
             class="flex items-center justify-center h-full w-full"
@@ -82,7 +82,7 @@
               />
             </label>
           </div>
-          <div class="w-full relative h-full"  v-if="showPaste">
+          <div class="w-full relative h-full" v-if="showPaste">
             <div
               id="imageUpload"
               contenteditable="true"
@@ -269,8 +269,10 @@
       </div>
     </div>
   </div>
-  <div class="flex h-full w-full top-0 left-0 absolute justify-center align-middle"
-    v-if="whatsappClicked">
+  <div
+    class="flex h-full w-full top-0 left-0 absolute justify-center align-middle"
+    v-if="whatsappClicked"
+  >
     <div
       class="flex flex-row h-[90%] w-[840px] justify-center align-middle items-center translate-y-[6%] flex-wrap z-20 rounded-3xl"
       style="background-color: #eae6df"
@@ -278,19 +280,30 @@
     >
       <whatsapp-game @whatsappClicked="handleWhatsappClick" />
     </div>
-    <div class="flex h-full w-full top-0 left-0 absolute justify-center align-middle" v-if="whatsappClicked">
-    <div class="flex flex-row h-[90%] w-[840px] justify-center align-middle items-center translate-y-[6%] z-20 rounded-3xl"  style="background-color: #eae6df;" v-if="whatsappClicked">
-      
-
-    <whatsapp-game @whatsappClicked="handleWhatsappClick"/>
- </div>
- </div>
- </div>
- <div class="flex h-full w-full top-0 left-0 absolute justify-center align-middle"  v-if="emailClicked">
- <div class=" flex flex-col h-4/5 w-3/5 justify-center align-middle items-center translate-y-[14%]  flex-wrap z-20 rounded-3xl"  style="background-color: #eae6df;" v-if="emailClicked">
-    
-      <email-game @emailClicked="handleEmailClick"/>
-   </div>
+    <div
+      class="flex h-full w-full top-0 left-0 absolute justify-center align-middle"
+      v-if="whatsappClicked"
+    >
+      <div
+        class="flex flex-row h-[90%] w-[840px] justify-center align-middle items-center translate-y-[6%] z-20 rounded-3xl"
+        style="background-color: #eae6df"
+        v-if="whatsappClicked"
+      >
+        <whatsapp-game @whatsappClicked="handleWhatsappClick" />
+      </div>
+    </div>
+  </div>
+  <div
+    class="flex h-full w-full top-0 left-0 absolute justify-center align-middle"
+    v-if="emailClicked"
+  >
+    <div
+      class="flex flex-col h-4/5 w-3/5 justify-center align-middle items-center translate-y-[14%] flex-wrap z-20 rounded-3xl"
+      style="background-color: #eae6df"
+      v-if="emailClicked"
+    >
+      <email-game @emailClicked="handleEmailClick" />
+    </div>
   </div>
 </template>
 
