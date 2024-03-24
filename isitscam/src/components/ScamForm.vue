@@ -1,5 +1,4 @@
 <template>
- 
   <div
     class="fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-70"
     v-if="showForm"
@@ -122,7 +121,7 @@
         </div>
       </div>
     </div>
-</div>
+  </div>
 </template>
 
 <script>

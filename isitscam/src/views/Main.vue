@@ -1,11 +1,11 @@
 <template>
-<navbar />
+  <navbar />
   <div>
     <div class="flex flex-row gap-6 mt-6">
-      <div class="rounded-2xl bg-white bg-opacity-60 py-6">
+      <div class="rounded-2xl bg-white bg-opacity-60 py-6 px-auto">
         <div class="flex flex-col chat-container">
           <div class="flex">
-            <div class="px-10 w-full">
+            <div class="px-4 w-full">
               <div class="talk-bubble title tri-right round btm-left">
                 <h1 class="title">isit<span class="bold-title">scam</span></h1>
               </div>
@@ -35,7 +35,7 @@
               <a href="/home" class="text-left">
                 <button
                   type="button"
-                  class="group my-2 w-full text-left text-gray-600 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-3 py-2.5 ml-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                  class="group ml-2 mr-7 px-3 py-2.5 w-11/12 text-left text-gray-600 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
                 >
                   <div class="flex flex-row justify-between text-middle">
                     <div class="flex items-center pl-1">
@@ -256,7 +256,7 @@ fwb-file-input {
 
 .tri-right.btm-left:after {
   left: -10px;
-  border-left-color: rgb(249 250 251);
+  border-left-color: rgb(255 255 255);
 }
 
 .tri-right.btm-right:after {
