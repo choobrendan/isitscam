@@ -34,7 +34,7 @@
               </div>
               <a href="/home" class="text-left">
                 <button type="button"
-                  class="group ml-2 mr-7 px-3 py-2.5 w-11/12 text-left text-gray-600 hover:text-white border-1 border-gray-800 hover:bg-[#102E4A] focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">
+                  class="group ml-2 mr-7 px-3 py-1.5 w-11/12 text-left bg-white text-gray-600 hover:text-white border-1 border-gray-800 hover:bg-[#102E4A] focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">
                   <div class="flex flex-row justify-between text-middle">
                     <div class="flex items-center pl-1">
                       <span class="typed-text">{{ typeValue }}</span>
